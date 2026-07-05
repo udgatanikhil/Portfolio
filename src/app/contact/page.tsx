@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle, Phone } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
 
 // Custom inline SVG icons for social platforms to ensure 100% robust ESM exports
 function GithubIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -226,22 +226,6 @@ export default function Contact() {
               {/* Coordinate 2 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold text-slate-400">Contact Number</h3>
-                  <a
-                    href="tel:+917977229524"
-                    className="text-sm font-semibold text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                  >
-                    +91 79772 29524
-                  </a>
-                </div>
-              </div>
-
-              {/* Coordinate 3 */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
                   <LinkedinIcon className="w-5 h-5" />
                 </div>
                 <div>
@@ -257,7 +241,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Coordinate 4 */}
+              {/* Coordinate 3 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
                   <GithubIcon className="w-5 h-5" />
@@ -265,12 +249,12 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xs font-semibold text-slate-400">GitHub</h3>
                   <a
-                    href="https://github.com/nikhiludgata"
+                    href="https://github.com/udgatanikhil"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-semibold text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                   >
-                    github.com/nikhiludgata
+                    github.com/udgatanikhil
                   </a>
                 </div>
               </div>

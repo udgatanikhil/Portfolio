@@ -55,7 +55,7 @@ export default function Footer() {
 
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com/nikhiludgata"
+              href="https://github.com/udgatanikhil"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 dark:text-slate-400 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
