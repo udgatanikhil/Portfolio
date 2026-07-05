@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafc;
+  --foreground: #090d16;
+  --card-bg: #ffffff;
+  --border-color: #f1f5f9;
+  --primary-accent: #4f46e5; /* Premium Indigo */
+  --secondary-accent: #0ea5e9; /* Sky Blue */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card-bg: var(--card-bg);
+  --color-border-custom: var(--border-color);
+  --color-brand-indigo: var(--primary-accent);
+  --color-brand-sky: var(--secondary-accent);
+  
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #07090e; /* Near obsidian black */
+    --foreground: #f8fafc; /* Crisp slate-50 */
+    --card-bg: #0f131a; /* Slate-900 tint */
+    --border-color: #1e2633; /* Dark slate-800 border */
+    --primary-accent: #6366f1; /* Vibrant Indigo for dark mode */
+    --secondary-accent: #38bdf8; /* sky-400 */
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom micro-animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Interactive card shadows */
+.premium-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-accent);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.04);
+}
+
+.dark .premium-card:hover {
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.08);
 }
