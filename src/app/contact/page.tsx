@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle, Smartphone } from "lucide-react";
 
 // Custom inline SVG icons for social platforms to ensure 100% robust ESM exports
 function GithubIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -60,7 +60,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) {
-      setError("Please fill out all required fields.");
+      setError("FILL ALL MANDATORY HUD FIELD NODES.");
       return;
     }
 
@@ -78,56 +78,56 @@ export default function Contact() {
   return (
     <div className="space-y-12 max-w-4xl mx-auto py-6 md:py-12 animate-fade-up">
       {/* Page Header */}
-      <section className="border-b border-slate-200 dark:border-slate-800 pb-6">
+      <section className="border-b border-cyan-950 pb-6">
         <div className="space-y-1">
-          <h1 className="text-xs font-mono tracking-widest uppercase text-slate-400 dark:text-slate-500">
-            Connect
+          <h1 className="text-xs font-mono tracking-widest uppercase text-cyan-500">
+            [SYS_HANDSHAKE] // MODULE_04
           </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-905 dark:text-white">
-            Get in Touch
+          <h2 className="text-3xl font-bold tracking-tight text-white stark-title font-mono">
+            GET_IN_TOUCH.log
           </h2>
         </div>
-        <p className="text-sm text-slate-500 dark:text-slate-400 mt-2 font-light">
-          Have a project, integration challenge, or technical PM requirement? Let&rsquo;s start a dialogue.
+        <p className="text-sm text-slate-400 mt-2 font-mono font-light leading-relaxed">
+          Initialize communication link. Underwriters, FinTech leads, and AI teams may connect to exchange schemas.
         </p>
       </section>
 
       {/* Main Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Contact Form */}
-        <section className="md:col-span-7 premium-card rounded-2xl p-6 bg-white dark:bg-slate-900/40">
-          <h3 className="text-base font-bold text-slate-900 dark:text-white mb-5">
-            Send a Direct Message
+        <section className="md:col-span-7 stark-panel rounded-lg p-6 relative overflow-hidden">
+          <h3 className="text-sm font-bold text-white font-mono tracking-wider mb-5">
+            // SEND_ENCRYPTED_MESSAGE
           </h3>
 
           {isSubmitted ? (
-            <div className="bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-200 dark:border-emerald-900 p-6 rounded-xl text-center space-y-3">
-              <CheckCircle className="w-10 h-10 text-emerald-500 mx-auto" />
-              <h4 className="font-bold text-emerald-850 dark:text-emerald-300">
-                Message Transmitted
+            <div className="bg-cyan-950/20 border border-cyan-500/20 p-6 rounded-lg text-center space-y-3 font-mono text-xs">
+              <CheckCircle className="w-10 h-10 text-cyan-400 mx-auto animate-pulse" />
+              <h4 className="font-bold text-cyan-400">
+                HANDSHAKE_COMPLETED: SUCCESS
               </h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                Thank you for reaching out. I will respond to your email address within 24 hours.
+              <p className="text-[10px] text-slate-500">
+                Encrypted payload compiled. Response loop active within 24 hours.
               </p>
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="mt-2 text-xs font-semibold text-indigo-650 dark:text-indigo-400 hover:underline"
+                className="mt-2 text-xs font-semibold text-cyan-400 hover:underline"
               >
-                Send another message
+                [TRANSMIT_NEW_PAYLOAD]
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 font-mono text-xs">
               {error && (
-                <div className="text-xs font-medium text-rose-600 dark:text-rose-405 bg-rose-50/50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900 p-3 rounded-lg">
+                <div className="text-rose-400 bg-rose-950/10 border border-rose-900/50 p-3 rounded-lg">
                   {error}
                 </div>
               )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label htmlFor="name" className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-500 block">
-                    Full Name <span className="text-rose-500">*</span>
+                  <label htmlFor="name" className="text-[9px] tracking-wider uppercase text-slate-500 block">
+                    NAME_IDENT <span className="text-rose-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -135,14 +135,14 @@ export default function Contact() {
                     name="name"
                     value={formState.name}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-600 focus:border-indigo-600 font-light"
+                    className="w-full px-3.5 py-2.5 bg-black/40 border border-cyan-950 text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 font-light rounded"
                     placeholder="Nikhil Udgata"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="email" className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-500 block">
-                    Email Address <span className="text-rose-500">*</span>
+                  <label htmlFor="email" className="text-[9px] tracking-wider uppercase text-slate-500 block">
+                    EMAIL_IDENT <span className="text-rose-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -150,15 +150,15 @@ export default function Contact() {
                     name="email"
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-600 focus:border-indigo-600 font-light"
+                    className="w-full px-3.5 py-2.5 bg-black/40 border border-cyan-950 text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 font-light rounded"
                     placeholder="udgatanikhil@gmail.com"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="subject" className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-500 block">
-                  Subject
+                <label htmlFor="subject" className="text-[9px] tracking-wider uppercase text-slate-500 block">
+                  SUB_NODE
                 </label>
                 <input
                   type="text"
@@ -166,14 +166,14 @@ export default function Contact() {
                   name="subject"
                   value={formState.subject}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-600 focus:border-indigo-600 font-light"
+                  className="w-full px-3.5 py-2.5 bg-black/40 border border-cyan-950 text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 font-light rounded"
                   placeholder="Lending integration, custom AI tools, CRM delivery..."
                 />
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="message" className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-500 block">
-                  Message <span className="text-rose-500">*</span>
+                <label htmlFor="message" className="text-[9px] tracking-wider uppercase text-slate-500 block">
+                  MESSAGE_PAYLOAD <span className="text-rose-500">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -181,22 +181,22 @@ export default function Contact() {
                   rows={5}
                   value={formState.message}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-600 focus:border-indigo-600 resize-none font-light"
-                  placeholder="Summarize your project goals or integration timeline..."
+                  className="w-full px-3.5 py-2.5 bg-black/40 border border-cyan-950 text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 resize-none font-light rounded"
+                  placeholder="Summarize your operational targets, tech stack, and scope..."
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium bg-indigo-600 hover:bg-indigo-750 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white disabled:bg-slate-200 dark:disabled:bg-slate-800 disabled:text-slate-400 transition-all duration-300 shadow-sm shadow-indigo-500/5 hover:scale-[1.01]"
+                className="hud-corner w-full inline-flex items-center justify-center px-4 py-3 bg-cyan-950/20 border border-cyan-500/30 hover:border-cyan-400 text-cyan-400 disabled:bg-slate-900 disabled:border-slate-800 disabled:text-slate-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:scale-[1.01]"
               >
                 {isSubmitting ? (
-                  <>Transmitting Inquiry...</>
+                  <>COMMILING_PAYLOAD...</>
                 ) : (
                   <>
-                    <Send className="w-4 h-4 mr-2" />
-                    Submit Message
+                    <Send className="w-3.5 h-3.5 mr-2 animate-pulse" />
+                    TRANSMIT_MESSAGE
                   </>
                 )}
               </button>
@@ -206,22 +206,22 @@ export default function Contact() {
 
         {/* Direct Coordinates */}
         <section className="md:col-span-5 space-y-6">
-          <div className="premium-card rounded-2xl p-6 space-y-6">
-            <h3 className="text-sm font-bold text-slate-900 dark:text-white border-b border-slate-205 dark:border-slate-800 pb-2">
-              Direct Coordinates
+          <div className="stark-panel rounded-lg p-6 space-y-6">
+            <h3 className="text-sm font-bold text-white font-mono tracking-wider border-b border-cyan-950 pb-2">
+              // TELEMETRY_COORDINATES
             </h3>
 
-            <div className="space-y-5">
+            <div className="space-y-5 font-mono text-xs">
               {/* Coordinate 1 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                  <Mail className="w-5 h-5" />
+                <div className="flex-shrink-0 w-10 h-10 rounded border border-cyan-500/20 bg-cyan-950/10 flex items-center justify-center text-cyan-400">
+                  <Mail className="w-5 h-5 animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-500">Direct Email</h4>
+                  <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">DIRECT_EMAIL</h4>
                   <a
                     href="mailto:udgatanikhil@gmail.com"
-                    className="text-sm font-medium text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    className="text-slate-200 hover:text-cyan-455 transition-colors font-semibold"
                   >
                     udgatanikhil@gmail.com
                   </a>
@@ -230,16 +230,16 @@ export default function Contact() {
 
               {/* Coordinate 2 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                  <LinkedinIcon className="w-5 h-5" />
+                <div className="flex-shrink-0 w-10 h-10 rounded border border-cyan-500/20 bg-cyan-950/10 flex items-center justify-center text-cyan-400">
+                  <LinkedinIcon className="w-5 h-5 animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-500">LinkedIn</h4>
+                  <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">LINKEDIN_PORT</h4>
                   <a
                     href="https://linkedin.com/in/nikhiludgata"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    className="text-slate-205 hover:text-cyan-455 transition-colors font-semibold"
                   >
                     linkedin.com/in/nikhiludgata
                   </a>
@@ -248,16 +248,16 @@ export default function Contact() {
 
               {/* Coordinate 3 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                  <GithubIcon className="w-5 h-5" />
+                <div className="flex-shrink-0 w-10 h-10 rounded border border-cyan-500/20 bg-cyan-950/10 flex items-center justify-center text-cyan-400">
+                  <GithubIcon className="w-5 h-5 animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-505">GitHub</h4>
+                  <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">GITHUB_PORT</h4>
                   <a
                     href="https://github.com/udgatanikhil"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    className="text-slate-205 hover:text-cyan-455 transition-colors font-semibold"
                   >
                     github.com/udgatanikhil
                   </a>
@@ -266,12 +266,12 @@ export default function Contact() {
 
               {/* Coordinate 4 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                  <MapPin className="w-5 h-5" />
+                <div className="flex-shrink-0 w-10 h-10 rounded border border-cyan-500/20 bg-cyan-950/10 flex items-center justify-center text-cyan-400">
+                  <MapPin className="w-5 h-5 animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-[10px] font-mono tracking-wider uppercase text-slate-400 dark:text-slate-500">Location</h4>
-                  <p className="text-sm font-medium text-slate-850 dark:text-slate-200">
+                  <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">LOCATION_REF</h4>
+                  <p className="text-slate-200 font-semibold">
                     Bengaluru, Karnataka, India
                   </p>
                 </div>

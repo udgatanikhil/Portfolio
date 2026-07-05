@@ -41,15 +41,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 mt-auto py-8 transition-colors duration-300 pb-20 md:pb-8">
+    <footer className="w-full border-t border-cyan-950 bg-black/60 mt-auto py-8 transition-colors duration-300 pb-20 md:pb-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-sm font-semibold text-slate-850 dark:text-slate-200">
-              Nikhil Udgata
-            </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Technical Project Manager — FinTech & AI Products
+            <div className="flex items-center space-x-2">
+              <span className="text-sm font-semibold text-slate-200">
+                Nikhil Udgata
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></span>
+              <span className="font-mono text-[9px] text-cyan-500 uppercase tracking-widest">SYS_STABLE</span>
+            </div>
+            <p className="text-xs text-slate-500 mt-1 font-mono">
+              Systems Deployment & Tech Operations TPM
             </p>
           </div>
 
@@ -58,7 +62,7 @@ export default function Footer() {
               href="https://github.com/udgatanikhil"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 dark:text-slate-400 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
+              className="text-slate-500 hover:text-cyan-400 hover:shadow-[0_0_10px_rgba(6,182,212,0.3)] transition-all duration-300"
               aria-label="GitHub Profile"
             >
               <GithubIcon className="w-5 h-5" />
@@ -67,14 +71,14 @@ export default function Footer() {
               href="https://linkedin.com/in/nikhiludgata"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 dark:text-slate-400 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
+              className="text-slate-500 hover:text-cyan-400 hover:shadow-[0_0_10px_rgba(6,182,212,0.3)] transition-all duration-300"
               aria-label="LinkedIn Profile"
             >
               <LinkedinIcon className="w-5 h-5" />
             </a>
             <a
               href="mailto:udgatanikhil@gmail.com"
-              className="text-slate-500 dark:text-slate-400 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
+              className="text-slate-500 hover:text-cyan-400 hover:shadow-[0_0_10px_rgba(6,182,212,0.3)] transition-all duration-300"
               aria-label="Email Contact"
             >
               <Mail className="w-5 h-5" />
@@ -82,8 +86,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs text-slate-400 dark:text-slate-500">
-              &copy; {currentYear} Nikhil Udgata. All rights reserved.
+            <p className="text-xs text-slate-500 font-mono">
+              &copy; {currentYear} Nikhil Udgata. SECURITY_LEVEL_01
             </p>
           </div>
         </div>

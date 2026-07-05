@@ -20,16 +20,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Nikhil Udgata | Technical Project Manager | FinTech & AI",
+  title: "Nikhil Udgata | Technical Project Manager | FinTech & AI Systems",
   description:
-    "Professional portfolio of Nikhil Udgata, a Technical Project Manager and Business Analyst specializing in digital lending journeys, RAG-based AI applications, healthcare CRM, and predictive risk analytics.",
+    "Futuristic portfolio of Nikhil Udgata, a Technical Project Manager specializing in B2B FinTech integration, RAG neural platforms, and machine learning risk engines.",
   keywords: [
     "Nikhil Udgata",
     "Technical Project Manager",
-    "Business Analyst",
-    "FinBox",
-    "LeadSquared",
-    "FinTech",
+    "Stark Tech",
+    "FinTech Integration",
     "AI",
     "RAG",
     "Risk Analytics",
@@ -48,11 +46,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-905 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-[#030712] text-slate-100 stark-grid relative overflow-x-hidden font-sans">
+        {/* Cyberpunk Stark Glow Layer */}
+        <div className="absolute top-0 left-0 w-full h-[800px] stark-radial pointer-events-none z-0"></div>
+        <div className="absolute top-[800px] right-0 w-[500px] h-[500px] bg-cyan-950/5 blur-[120px] pointer-events-none z-0"></div>
+        
         <Navbar />
-        <main className="flex-grow w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <main className="flex-grow w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 z-10 relative">
           {children}
         </main>
         <Footer />
