@@ -41,15 +41,15 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-slate-900 bg-[#090a0f] py-8 transition-colors duration-300 pb-20 md:pb-8">
+    <footer className="w-full border-t border-[#ebdcb9]/60 bg-[#fbf9f5] py-8 transition-colors duration-300 pb-20 md:pb-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <div className="flex items-center space-x-2">
-              <span className="text-sm font-semibold text-slate-200">
+              <span className="text-sm font-semibold text-slate-800">
                 Nikhil Udgata
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-earth-green"></span>
             </div>
             <p className="text-xs text-slate-500 mt-1 font-mono">
               Technical Project Manager
@@ -61,7 +61,7 @@ export default function Footer() {
               href="https://github.com/udgatanikhil"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-cyan-400 transition-colors duration-200"
+              className="text-slate-400 hover:text-earth-green transition-colors duration-200"
               aria-label="GitHub Profile"
             >
               <GithubIcon className="w-5 h-5" />
@@ -70,14 +70,14 @@ export default function Footer() {
               href="https://linkedin.com/in/nikhiludgata"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-cyan-400 transition-colors duration-200"
+              className="text-slate-400 hover:text-earth-green transition-colors duration-200"
               aria-label="LinkedIn Profile"
             >
               <LinkedinIcon className="w-5 h-5" />
             </a>
             <a
               href="mailto:udgatanikhil@gmail.com"
-              className="text-slate-500 hover:text-cyan-400 transition-colors duration-200"
+              className="text-slate-400 hover:text-earth-green transition-colors duration-200"
               aria-label="Email Contact"
             >
               <Mail className="w-5 h-5" />
@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs text-slate-500 font-mono">
+            <p className="text-xs text-slate-550 font-mono">
               &copy; {currentYear} Nikhil Udgata. All rights reserved.
             </p>
           </div>

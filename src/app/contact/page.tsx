@@ -78,16 +78,16 @@ export default function Contact() {
   return (
     <div className="space-y-12 max-w-4xl mx-auto py-8 md:py-16 animate-fade-up">
       {/* Page Header */}
-      <section className="border-b border-slate-900 pb-6">
+      <section className="border-b border-[#ebdcb9]/60 pb-6">
         <div className="space-y-1">
-          <h1 className="text-xs font-mono tracking-widest uppercase text-cyan-400">
+          <h1 className="text-xs font-mono tracking-widest uppercase text-earth-green">
             Contact
           </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-white font-sans">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-sans">
             Get in Touch
           </h2>
         </div>
-        <p className="text-sm text-slate-405 mt-2 font-light leading-relaxed">
+        <p className="text-sm text-slate-550 mt-2 font-light leading-relaxed">
           Please fill out the form below or reach out directly to coordinate lending integration, custom RAG setups, or operational timelines.
         </p>
       </section>
@@ -95,15 +95,15 @@ export default function Contact() {
       {/* Main Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Contact Form */}
-        <section className="md:col-span-7 stark-panel rounded-xl p-6 relative overflow-hidden">
-          <h3 className="text-sm font-bold text-white mb-5 font-mono">
+        <section className="md:col-span-7 stark-panel rounded-xl p-6 relative overflow-hidden bg-white">
+          <h3 className="text-sm font-bold text-slate-805 mb-5 font-mono">
             Send Message
           </h3>
 
           {isSubmitted ? (
-            <div className="bg-cyan-950/20 border border-cyan-500/20 p-6 rounded-lg text-center space-y-3 text-xs">
-              <CheckCircle className="w-10 h-10 text-cyan-400 mx-auto animate-pulse" />
-              <h4 className="font-bold text-cyan-405 font-mono">
+            <div className="bg-earth-green/5 border border-earth-green/10 p-6 rounded-lg text-center space-y-3 text-xs">
+              <CheckCircle className="w-10 h-10 text-earth-green mx-auto animate-pulse" />
+              <h4 className="font-bold text-earth-green font-mono">
                 Message Sent
               </h4>
               <p className="text-[10px] text-slate-500 font-light">
@@ -111,7 +111,7 @@ export default function Contact() {
               </p>
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="mt-2 text-xs font-semibold text-cyan-450 hover:underline"
+                className="mt-2 text-xs font-semibold text-earth-green hover:underline"
               >
                 Send another message
               </button>
@@ -119,7 +119,7 @@ export default function Contact() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 text-xs font-mono">
               {error && (
-                <div className="text-rose-400 bg-rose-950/10 border border-rose-900/50 p-3 rounded-lg">
+                <div className="text-rose-600 bg-rose-50 border border-rose-250 p-3 rounded-lg">
                   {error}
                 </div>
               )}
@@ -135,7 +135,7 @@ export default function Contact() {
                     name="name"
                     value={formState.name}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-black/40 border border-slate-900 text-slate-205 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 font-light rounded-lg"
+                    className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg"
                     placeholder="Nikhil Udgata"
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                     name="email"
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-black/40 border border-slate-900 text-slate-205 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 font-light rounded-lg"
+                    className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg"
                     placeholder="udgatanikhil@gmail.com"
                   />
                 </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                   name="subject"
                   value={formState.subject}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 bg-black/40 border border-slate-900 text-slate-205 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 font-light rounded-lg"
+                  className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg"
                   placeholder="Integration, AI, or CRM delivery..."
                 />
               </div>
@@ -181,7 +181,7 @@ export default function Contact() {
                   rows={5}
                   value={formState.message}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 bg-black/40 border border-slate-900 text-slate-205 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 resize-none font-light rounded-lg"
+                  className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green resize-none font-light rounded-lg"
                   placeholder="Summarize your project goals or timeline..."
                 />
               </div>
@@ -189,7 +189,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center px-4 py-3 bg-cyan-950/20 border border-cyan-500/30 hover:border-cyan-400 text-cyan-455 disabled:bg-slate-900 disabled:border-slate-800 disabled:text-slate-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:scale-[1.01] rounded-lg"
+                className="w-full inline-flex items-center justify-center px-4 py-3 bg-earth-green hover:bg-earth-green/90 text-white disabled:bg-slate-205 disabled:text-slate-400 transition-all duration-300 hover:scale-[1.01] rounded-lg"
               >
                 {isSubmitting ? (
                   <>Sending Message...</>
@@ -206,22 +206,22 @@ export default function Contact() {
 
         {/* Direct Coordinates */}
         <section className="md:col-span-5 space-y-6">
-          <div className="stark-panel rounded-xl p-6 space-y-6">
-            <h3 className="text-sm font-bold text-white mb-2 border-b border-slate-900 pb-2">
+          <div className="stark-panel rounded-xl p-6 space-y-6 bg-white">
+            <h3 className="text-sm font-bold text-slate-800 mb-2 border-b border-[#ebdcb9]/60 pb-2">
               Coordinates
             </h3>
 
             <div className="space-y-5 font-mono text-xs">
               {/* Coordinate 1 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-950/20 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
                   <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">Email</h4>
                   <a
                     href="mailto:udgatanikhil@gmail.com"
-                    className="text-slate-200 hover:text-cyan-400 transition-colors font-semibold"
+                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold"
                   >
                     udgatanikhil@gmail.com
                   </a>
@@ -230,7 +230,7 @@ export default function Contact() {
 
               {/* Coordinate 2 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-950/20 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <LinkedinIcon className="w-4 h-4" />
                 </div>
                 <div>
@@ -239,7 +239,7 @@ export default function Contact() {
                     href="https://linkedin.com/in/nikhiludgata"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-205 hover:text-cyan-400 transition-colors font-semibold"
+                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold"
                   >
                     linkedin.com/in/nikhiludgata
                   </a>
@@ -248,7 +248,7 @@ export default function Contact() {
 
               {/* Coordinate 3 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-950/20 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <GithubIcon className="w-4 h-4" />
                 </div>
                 <div>
@@ -257,7 +257,7 @@ export default function Contact() {
                     href="https://github.com/udgatanikhil"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-205 hover:text-cyan-400 transition-colors font-semibold"
+                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold"
                   >
                     github.com/udgatanikhil
                   </a>
@@ -266,12 +266,12 @@ export default function Contact() {
 
               {/* Coordinate 4 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-950/20 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
                   <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">Location</h4>
-                  <p className="text-slate-200 font-semibold">
+                  <p className="text-slate-800 font-semibold">
                     Bengaluru, Karnataka, India
                   </p>
                 </div>

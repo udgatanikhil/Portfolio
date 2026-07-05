@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090a0f; /* Deep obsidian black */
-  --foreground: #f8fafc;
-  --card-bg: #111216; /* Clean dark grey card */
-  --border-color: #1e2026; /* Crisp dark border */
-  --accent-cyan: #06b6d4; /* Cyber Cyan */
+  --background: #fbf9f5; /* Elegant warm alabaster / light skin tone */
+  --foreground: #292d28; /* Earthy charcoal-forest text */
+  --card-bg: #ffffff;    /* Pure white card backgrounds */
+  --border-color: #ebdcb9; /* Warm sand/nude borders */
+  --accent-green: #3a4f41; /* Muted Sage/Forest Green */
+  --accent-blue: #7ca2b4;  /* Muted Mineral Sky Blue */
+  --accent-sand: #f0e6d2;  /* Soft sand/skin tone highlight */
 }
 
 @theme inline {
@@ -13,10 +15,23 @@
   --color-foreground: var(--foreground);
   --color-card-bg: var(--card-bg);
   --color-border-custom: var(--border-color);
-  --color-accent-cyan: var(--accent-cyan);
+  
+  --color-earth-green: var(--accent-green);
+  --color-earth-blue: var(--accent-blue);
+  --color-earth-sand: var(--accent-sand);
   
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* Force light mode background across system schemes */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fbf9f5;
+    --foreground: #292d28;
+    --card-bg: #ffffff;
+    --border-color: #ebdcb9;
+  }
 }
 
 html {
@@ -33,7 +48,7 @@ body {
 /* Elegant slow animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-5px); }
 }
 
 @keyframes spin-slow {
@@ -51,7 +66,7 @@ body {
 }
 
 .animate-spin-slow {
-  animation: spin-slow 25s linear infinite;
+  animation: spin-slow 35s linear infinite;
 }
 
 .animate-morph {
@@ -61,11 +76,13 @@ body {
 /* Minimalist elegant cards */
 .stark-panel {
   background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(235, 220, 185, 0.6);
+  box-shadow: 0 4px 20px -10px rgba(58, 79, 65, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stark-panel:hover {
-  border-color: rgba(6, 182, 212, 0.35);
+  border-color: var(--accent-green);
+  box-shadow: 0 10px 25px -10px rgba(58, 79, 65, 0.12);
   transform: translateY(-2px);
 }
