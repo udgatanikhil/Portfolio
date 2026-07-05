@@ -1,22 +1,31 @@
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Cpu } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ChevronRight, MapPin } from "lucide-react";
 import { caseStudies } from "@/data/case-studies";
 
-// A clean, abstract, organic morphing circle (using earthy green/blue/sand gradients)
-function MinimalMorphingBlob() {
+// Double-framed minimalist portrait visual
+function HeroPortrait() {
   return (
     <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto flex items-center justify-center">
-      {/* Slow rotating ring */}
-      <div className="absolute inset-0 rounded-full border border-[#ebdcb9]/60 animate-spin-slow"></div>
+      {/* Slow rotating outer circle frame */}
+      <div className="absolute inset-0 rounded-full border border-earth-green/20 animate-spin-slow"></div>
       
-      {/* Morphing blob with soft earthy green and mineral blue gradient */}
-      <div className="w-[80%] h-[80%] bg-gradient-to-tr from-earth-blue/20 via-white to-earth-green/10 border border-[#ebdcb9]/40 animate-morph shadow-[0_8px_30px_rgba(58,79,65,0.06)] flex items-center justify-center">
-        <Cpu className="w-8 h-8 text-earth-green/70 animate-float" />
+      {/* Off-center decorative beige block */}
+      <div className="absolute -top-3 -left-3 w-12 h-12 border-t border-l border-earth-green/30"></div>
+      <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b border-r border-earth-green/30"></div>
+      
+      {/* Frame wrapper around picture */}
+      <div className="w-[85%] h-[85%] rounded-2xl overflow-hidden border border-[#eadeca] bg-[#fdfdfd] p-3 shadow-md shadow-stone-200/40 relative z-10 animate-float">
+        <div className="relative w-full h-full rounded-xl overflow-hidden">
+          <Image
+            src="/nikhil_avatar.jpg"
+            alt="Nikhil Udgata"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
-
-      {/* Subtle organic indicator dots */}
-      <div className="absolute top-4 left-4 w-1.5 h-1.5 rounded-full bg-earth-green/60 animate-pulse"></div>
-      <div className="absolute bottom-8 right-12 w-1.5 h-1.5 rounded-full bg-earth-blue/60 animate-pulse"></div>
     </div>
   );
 }
@@ -31,17 +40,17 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         {/* Left Column: Headline */}
         <div className="md:col-span-7 space-y-6 text-left">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-[#ebdcb9] bg-[#f0e6d2]/30 text-earth-green text-[10px] font-mono tracking-wider uppercase font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-earth-green"></span>
-            <span>Available for select projects</span>
+          <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-[#ebdcb9] bg-[#f0e6d2]/30 text-earth-green text-[10px] font-mono tracking-wider uppercase font-semibold">
+            <MapPin className="w-3.5 h-3.5" />
+            <span>Bengaluru (BLR) // Available for key projects</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-800 leading-[1.1] font-sans">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-800 leading-[1.08] font-serif">
             Delivering complex FinTech products and AI architectures.
           </h1>
           
-          <p className="text-lg text-slate-655 leading-relaxed max-w-xl font-light">
-            I am a Technical Project Manager specializing in B2B digital lending APIs, RAG search integrations, and machine learning default risk models.
+          <p className="text-lg text-slate-600 leading-relaxed max-w-xl font-light">
+            I am a Technical Project Manager based in Bengaluru (BLR). I coordinate B2B digital lending APIs, RAG search integrations, and machine learning default risk models.
           </p>
           
           <div className="flex flex-wrap gap-4 pt-2">
@@ -61,9 +70,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Column: Morphing Blob Animation */}
+        {/* Right Column: Framed Headshot Illustration */}
         <div className="md:col-span-5 flex items-center justify-center">
-          <MinimalMorphingBlob />
+          <HeroPortrait />
         </div>
       </section>
 
@@ -74,7 +83,7 @@ export default function Home() {
             <h2 className="text-[10px] font-mono tracking-widest uppercase text-earth-green">
               Selected Work
             </h2>
-            <h3 className="text-2xl font-bold text-slate-800 tracking-tight">
+            <h3 className="text-2xl font-bold text-slate-800 tracking-tight font-serif">
               Systems Deployment Logs
             </h3>
           </div>
@@ -88,47 +97,56 @@ export default function Home() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {featuredCases.map((project) => (
-            <div
-              key={project.slug}
-              className="stark-panel rounded-xl overflow-hidden flex flex-col justify-between"
-            >
-              <div className="p-6 space-y-4">
-                <span className="text-[9px] font-mono uppercase tracking-wider text-earth-green bg-earth-green/5 px-2 py-0.5 rounded border border-earth-green/10 inline-block font-semibold">
-                  {project.category}
-                </span>
-                <h4 className="text-lg font-bold text-slate-800 tracking-tight font-sans">
-                  {project.title}
-                </h4>
-                <p className="text-xs text-slate-550 leading-relaxed font-light line-clamp-3">
-                  {project.summary}
-                </p>
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-[#f0e6d2]/20 text-slate-600 px-2 py-0.5 rounded text-[9px] font-mono border border-[#ebdcb9]/30"
-                    >
-                      {tech}
+          {featuredCases.map((project, idx) => {
+            // Map generated images to case studies
+            let imageUrl = "/crm_ml_project.jpg";
+            if (idx === 0) imageUrl = "/lending_project.jpg";
+            if (idx === 1) imageUrl = "/rag_project.jpg";
+            
+            return (
+              <div
+                key={project.slug}
+                className="stark-panel rounded-xl overflow-hidden flex flex-col justify-between"
+              >
+                <div>
+                  {/* Classy visual header card image */}
+                  <div className="relative w-full h-40 bg-stone-100 border-b border-[#ebdcb9]/40 overflow-hidden">
+                    <Image
+                      src={imageUrl}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  
+                  <div className="p-6 space-y-4">
+                    <span className="text-[9px] font-mono uppercase tracking-wider text-earth-green bg-earth-green/5 px-2 py-0.5 rounded border border-earth-green/10 inline-block font-semibold">
+                      {project.category}
                     </span>
-                  ))}
+                    <h4 className="text-lg font-bold text-slate-800 tracking-tight font-serif">
+                      {project.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 leading-relaxed font-light line-clamp-3">
+                      {project.summary}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="px-6 py-4 bg-[#fbf9f5]/60 border-t border-[#ebdcb9]/30 flex justify-between items-center text-[10px] font-mono">
+                  <span className="text-slate-500">
+                    Role: {project.role}
+                  </span>
+                  <Link
+                    href={`/case-studies#${project.slug}`}
+                    className="font-bold text-earth-green hover:underline flex items-center"
+                  >
+                    View Details
+                    <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
+                  </Link>
                 </div>
               </div>
-              
-              <div className="px-6 py-4 bg-[#fbf9f5]/60 border-t border-[#ebdcb9]/30 flex justify-between items-center text-[10px] font-mono">
-                <span className="text-slate-500">
-                  Role: {project.role}
-                </span>
-                <Link
-                  href={`/case-studies#${project.slug}`}
-                  className="font-bold text-earth-green hover:underline flex items-center"
-                >
-                  View Details
-                  <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
-                </Link>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -138,14 +156,14 @@ export default function Home() {
           <h2 className="text-[10px] font-mono tracking-widest uppercase text-earth-green">
             Services
           </h2>
-          <h3 className="text-2xl font-bold text-slate-800 tracking-tight">
+          <h3 className="text-2xl font-bold text-slate-800 tracking-tight font-serif">
             Verticals of Delivery
           </h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="stark-panel rounded-xl p-6 space-y-3">
-            <h4 className="font-semibold text-slate-800 text-base flex items-center gap-2">
+            <h4 className="font-semibold text-slate-800 text-base flex items-center gap-2 font-serif">
               <span className="w-2 h-2 rounded-full bg-earth-blue"></span>
               FinTech Gateways
             </h4>
@@ -155,7 +173,7 @@ export default function Home() {
           </div>
 
           <div className="stark-panel rounded-xl p-6 space-y-3">
-            <h4 className="font-semibold text-slate-800 text-base flex items-center gap-2">
+            <h4 className="font-semibold text-slate-800 text-base flex items-center gap-2 font-serif">
               <span className="w-2 h-2 rounded-full bg-earth-green"></span>
               Generative AI
             </h4>
@@ -165,11 +183,11 @@ export default function Home() {
           </div>
 
           <div className="stark-panel rounded-xl p-6 space-y-3">
-            <h4 className="font-semibold text-slate-800 text-base flex items-center gap-2">
+            <h4 className="font-semibold text-slate-800 text-base flex items-center gap-2 font-serif">
               <span className="w-2 h-2 rounded-full bg-[#ebdcb9]"></span>
               Risk & CRM
             </h4>
-            <p className="text-xs text-slate-505 leading-relaxed font-light">
+            <p className="text-xs text-slate-500 leading-relaxed font-light">
               Machine learning customer default risk scoring, healthcare CRM feature automation, fits gap analyses, and compliance parameters.
             </p>
           </div>
@@ -182,11 +200,11 @@ export default function Home() {
           <h3 className="text-[10px] font-mono tracking-widest uppercase text-earth-green">
             Philosophy
           </h3>
-          <blockquote className="text-slate-700 text-sm md:text-base font-light italic leading-relaxed border-l border-earth-green/45 pl-6">
+          <blockquote className="text-slate-700 text-sm md:text-lg font-light italic leading-relaxed border-l border-earth-green/45 pl-6 font-serif">
             &ldquo;I believe technical project management is about translating complex accounting frameworks and risk metrics into clean API contracts, automated integration templates, and reliable release schedules.&rdquo;
           </blockquote>
           <div className="text-[10px] text-slate-500 font-mono pl-6 mt-2">
-            &mdash; Nikhil Udgata, Technical PM
+            &mdash; Nikhil Udgata, Technical PM // BLR
           </div>
         </div>
       </section>

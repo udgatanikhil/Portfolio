@@ -2,9 +2,9 @@
 
 :root {
   --background: #fbf9f5; /* Elegant warm alabaster / light skin tone */
-  --foreground: #292d28; /* Earthy charcoal-forest text */
+  --foreground: #2d312c; /* Earthy charcoal-forest text */
   --card-bg: #ffffff;    /* Pure white card backgrounds */
-  --border-color: #ebdcb9; /* Warm sand/nude borders */
+  --border-color: #eadeca; /* Warm sand/nude borders */
   --accent-green: #3a4f41; /* Muted Sage/Forest Green */
   --accent-blue: #7ca2b4;  /* Muted Mineral Sky Blue */
   --accent-sand: #f0e6d2;  /* Soft sand/skin tone highlight */
@@ -20,7 +20,8 @@
   --color-earth-blue: var(--accent-blue);
   --color-earth-sand: var(--accent-sand);
   
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
@@ -28,9 +29,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #fbf9f5;
-    --foreground: #292d28;
+    --foreground: #2d312c;
     --card-bg: #ffffff;
-    --border-color: #ebdcb9;
+    --border-color: #eadeca;
   }
 }
 
@@ -76,13 +77,13 @@ body {
 /* Minimalist elegant cards */
 .stark-panel {
   background-color: var(--card-bg);
-  border: 1px solid rgba(235, 220, 185, 0.6);
-  box-shadow: 0 4px 20px -10px rgba(58, 79, 65, 0.05);
+  border: 1px solid rgba(234, 222, 202, 0.7);
+  box-shadow: 0 4px 20px -10px rgba(58, 79, 65, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stark-panel:hover {
   border-color: var(--accent-green);
-  box-shadow: 0 10px 25px -10px rgba(58, 79, 65, 0.12);
+  box-shadow: 0 10px 25px -10px rgba(58, 79, 65, 0.08);
   transform: translateY(-2px);
 }

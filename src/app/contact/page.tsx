@@ -83,7 +83,7 @@ export default function Contact() {
           <h1 className="text-xs font-mono tracking-widest uppercase text-earth-green">
             Contact
           </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-sans">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-serif">
             Get in Touch
           </h2>
         </div>
@@ -135,7 +135,7 @@ export default function Contact() {
                     name="name"
                     value={formState.name}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg"
+                    className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg font-sans"
                     placeholder="Nikhil Udgata"
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                     name="email"
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg"
+                    className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg font-sans"
                     placeholder="udgatanikhil@gmail.com"
                   />
                 </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                   name="subject"
                   value={formState.subject}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg"
+                  className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green font-light rounded-lg font-sans"
                   placeholder="Integration, AI, or CRM delivery..."
                 />
               </div>
@@ -181,7 +181,7 @@ export default function Contact() {
                   rows={5}
                   value={formState.message}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green resize-none font-light rounded-lg"
+                  className="w-full px-3.5 py-2.5 bg-[#fbf9f5]/55 border border-[#ebdcb9] text-slate-800 focus:outline-none focus:ring-1 focus:ring-earth-green focus:border-earth-green resize-none font-light rounded-lg font-sans"
                   placeholder="Summarize your project goals or timeline..."
                 />
               </div>
@@ -189,7 +189,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center px-4 py-3 bg-earth-green hover:bg-earth-green/90 text-white disabled:bg-slate-205 disabled:text-slate-400 transition-all duration-300 hover:scale-[1.01] rounded-lg"
+                className="w-full inline-flex items-center justify-center px-4 py-3 bg-earth-green hover:bg-earth-green/90 text-white disabled:bg-slate-205 disabled:text-slate-400 transition-all duration-300 hover:scale-[1.01] rounded-lg font-sans text-sm font-medium"
               >
                 {isSubmitting ? (
                   <>Sending Message...</>
@@ -206,8 +206,8 @@ export default function Contact() {
 
         {/* Direct Coordinates */}
         <section className="md:col-span-5 space-y-6">
-          <div className="stark-panel rounded-xl p-6 space-y-6 bg-white">
-            <h3 className="text-sm font-bold text-slate-800 mb-2 border-b border-[#ebdcb9]/60 pb-2">
+          <div className="stark-panel rounded-xl p-6 space-y-6 bg-white shadow-sm">
+            <h3 className="text-sm font-bold text-slate-805 mb-2 border-b border-[#ebdcb9]/60 pb-2 font-serif">
               Coordinates
             </h3>
 
@@ -221,7 +221,7 @@ export default function Contact() {
                   <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">Email</h4>
                   <a
                     href="mailto:udgatanikhil@gmail.com"
-                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold"
+                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold font-sans text-sm"
                   >
                     udgatanikhil@gmail.com
                   </a>
@@ -239,7 +239,7 @@ export default function Contact() {
                     href="https://linkedin.com/in/nikhiludgata"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold"
+                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold font-sans text-sm"
                   >
                     linkedin.com/in/nikhiludgata
                   </a>
@@ -257,7 +257,7 @@ export default function Contact() {
                     href="https://github.com/udgatanikhil"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold"
+                    className="text-slate-800 hover:text-earth-green transition-colors font-semibold font-sans text-sm"
                   >
                     github.com/udgatanikhil
                   </a>
@@ -271,8 +271,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">Location</h4>
-                  <p className="text-slate-800 font-semibold">
-                    Bengaluru, Karnataka, India
+                  <p className="text-slate-800 font-semibold font-sans text-sm">
+                    Bengaluru (BLR), Karnataka, India
                   </p>
                 </div>
               </div>

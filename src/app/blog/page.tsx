@@ -11,11 +11,11 @@ export default function Blog() {
           <h1 className="text-xs font-mono tracking-widest uppercase text-earth-green">
             Insights
           </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-sans">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-serif">
             Technical & Product Blog
           </h2>
         </div>
-        <p className="text-sm text-slate-600 leading-relaxed font-light">
+        <p className="text-sm text-slate-600 leading-relaxed font-light font-sans">
           Articles exploring the intersections of Artificial Intelligence, product management metrics, 
           data architecture, and agile methodologies. Written for developers, project managers, and tech leaders.
         </p>
@@ -28,7 +28,7 @@ export default function Blog() {
             key={post.slug}
             className="group relative flex flex-col items-start border-b border-[#ebdcb9]/60 pb-8 last:border-b-0 last:pb-0"
           >
-            <div className="flex items-center gap-3 text-[9px] font-mono text-slate-500 mb-3 uppercase tracking-wider">
+            <div className="flex items-center gap-3 text-[9px] font-mono text-slate-505 mb-3 uppercase tracking-wider">
               <span className="font-semibold text-earth-green">
                 {post.category}
               </span>
@@ -44,13 +44,13 @@ export default function Blog() {
               </span>
             </div>
 
-            <h3 className="text-lg font-bold tracking-tight text-slate-800 group-hover:text-earth-green transition-colors duration-250 font-sans">
+            <h3 className="text-lg font-bold tracking-tight text-slate-800 group-hover:text-earth-green transition-colors duration-250 font-serif">
               <Link href={`/blog/posts/${post.slug}`}>
                 {post.title}
               </Link>
             </h3>
 
-            <p className="text-xs text-slate-550 mt-2 leading-relaxed font-light">
+            <p className="text-xs text-slate-550 mt-2 leading-relaxed font-light font-sans">
               {post.excerpt}
             </p>
 

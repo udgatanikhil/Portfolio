@@ -9,7 +9,7 @@ export default function Resume() {
           <h1 className="text-xs font-mono tracking-widest uppercase text-earth-green">
             Resume
           </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-sans">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-serif">
             Nikhil Udgata
           </h2>
         </div>
@@ -38,7 +38,7 @@ export default function Resume() {
               {/* Job 1 */}
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-slate-800 text-base tracking-wide font-sans">
+                  <h4 className="font-bold text-slate-800 text-base tracking-wide font-serif">
                     Technical Project Manager
                   </h4>
                   <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
@@ -49,7 +49,7 @@ export default function Resume() {
                 <div className="flex items-center justify-between text-xs text-earth-green font-mono tracking-wider">
                   <span>FinBox</span>
                   <span className="flex items-center gap-1 text-slate-400 font-normal">
-                    <MapPin className="w-3 h-3" /> Bengaluru, India
+                    <MapPin className="w-3 h-3" /> Bengaluru (BLR), India
                   </span>
                 </div>
                 <ul className="list-disc pl-5 text-xs text-slate-600 space-y-1.5 pt-1.5 leading-relaxed font-light">
@@ -63,7 +63,7 @@ export default function Resume() {
               {/* Job 2 */}
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-slate-800 text-base tracking-wide font-sans">
+                  <h4 className="font-bold text-slate-800 text-base tracking-wide font-serif">
                     Senior Business Analyst
                   </h4>
                   <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
@@ -74,7 +74,7 @@ export default function Resume() {
                 <div className="flex items-center justify-between text-xs text-earth-green font-mono tracking-wider">
                   <span>LeadSquared (LSQ)</span>
                   <span className="flex items-center gap-1 text-slate-400 font-normal">
-                    <MapPin className="w-3 h-3" /> Bengaluru, India
+                    <MapPin className="w-3 h-3" /> Bengaluru (BLR), India
                   </span>
                 </div>
                 <ul className="list-disc pl-5 text-xs text-slate-600 space-y-1.5 pt-1.5 leading-relaxed font-light">
@@ -88,7 +88,7 @@ export default function Resume() {
               {/* Job 3 */}
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-slate-800 text-base tracking-wide font-sans">
+                  <h4 className="font-bold text-slate-800 text-base tracking-wide font-serif">
                     Business Analyst & Associate BA
                   </h4>
                   <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
@@ -99,7 +99,7 @@ export default function Resume() {
                 <div className="flex items-center justify-between text-xs text-earth-green font-mono tracking-wider">
                   <span>Odessa Technologies</span>
                   <span className="flex items-center gap-1 text-slate-400 font-normal">
-                    <MapPin className="w-3 h-3" /> Bengaluru, India
+                    <MapPin className="w-3 h-3" /> Bengaluru (BLR), India
                   </span>
                 </div>
                 <ul className="list-disc pl-5 text-xs text-slate-600 space-y-1.5 pt-1.5 leading-relaxed font-light">
@@ -122,7 +122,7 @@ export default function Resume() {
             <div className="space-y-6">
               <div className="space-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-slate-800 text-sm tracking-wide font-sans">
+                  <h4 className="font-bold text-slate-800 text-sm tracking-wide font-serif">
                     MBA in Technology Management
                   </h4>
                   <span className="text-xs font-mono text-slate-500">2018 &ndash; 2020</span>
@@ -134,7 +134,7 @@ export default function Resume() {
 
               <div className="space-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-slate-800 text-sm tracking-wide font-sans">
+                  <h4 className="font-bold text-slate-800 text-sm tracking-wide font-serif">
                     B.Tech. in Computer Science
                   </h4>
                   <span className="text-xs font-mono text-slate-500">2015 &ndash; 2018</span>
@@ -151,7 +151,7 @@ export default function Resume() {
         <div className="md:col-span-4 space-y-12">
           {/* Skills Grid */}
           <section className="space-y-6">
-            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-500 flex items-center gap-2 border-b border-[#ebdcb9]/60 pb-2.5">
+            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-555 flex items-center gap-2 border-b border-[#ebdcb9]/60 pb-2.5">
               <BookOpen className="w-4 h-4 text-earth-green" />
               Skills
             </h3>
@@ -212,20 +212,20 @@ export default function Resume() {
 
           {/* Credentials */}
           <section className="space-y-6">
-            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-500 flex items-center gap-2 border-b border-[#ebdcb9]/60 pb-2.5">
+            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-555 flex items-center gap-2 border-b border-[#ebdcb9]/60 pb-2.5">
               <Award className="w-4 h-4 text-earth-green" />
               Credentials
             </h3>
             
             <div className="space-y-4">
-              <div className="stark-panel rounded-lg p-4 bg-white">
+              <div className="stark-panel rounded-lg p-4 bg-white shadow-sm">
                 <p className="text-xs font-mono font-bold text-slate-800 tracking-wider">
                   CFA Level 1 Passed
                 </p>
                 <p className="text-[9px] font-mono text-slate-500 mt-1">CFA Institute (L2 Candidate)</p>
               </div>
 
-              <div className="stark-panel rounded-lg p-4 bg-white">
+              <div className="stark-panel rounded-lg p-4 bg-white shadow-sm">
                 <p className="text-xs font-mono font-bold text-slate-800 tracking-wider">
                   Data Science Honors
                 </p>
