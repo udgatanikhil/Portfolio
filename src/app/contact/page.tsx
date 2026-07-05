@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle, Phone } from "lucide-react";
 
 // Custom inline SVG icons for social platforms to ensure 100% robust ESM exports
 function GithubIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -67,7 +67,7 @@ export default function Contact() {
     setError("");
     setIsSubmitting(true);
 
-    // Simulate form submission to backend (API route or serverless handler)
+    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -83,7 +83,7 @@ export default function Contact() {
           Get in Touch
         </h1>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Have a complex project that requires coordination? Let&rsquo;s connect.
+          Have a project, integration, or product challenge? Let&rsquo;s connect.
         </p>
       </section>
 
@@ -131,7 +131,7 @@ export default function Contact() {
                     value={formState.name}
                     onChange={handleChange}
                     className="w-full px-3.5 py-2 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                    placeholder="Jane Doe"
+                    placeholder="Nikhil Udgata"
                   />
                 </div>
 
@@ -146,7 +146,7 @@ export default function Contact() {
                     value={formState.email}
                     onChange={handleChange}
                     className="w-full px-3.5 py-2 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                    placeholder="jane.doe@example.com"
+                    placeholder="udgatanikhil@gmail.com"
                   />
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function Contact() {
                   value={formState.subject}
                   onChange={handleChange}
                   className="w-full px-3.5 py-2 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholder="Project proposal, advisory role, etc."
+                  placeholder="Lending integration, custom AI tools, CRM delivery..."
                 />
               </div>
 
@@ -177,7 +177,7 @@ export default function Contact() {
                   value={formState.message}
                   onChange={handleChange}
                   className="w-full px-3.5 py-2 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 resize-none"
-                  placeholder="Explain your project objectives and key deliverables..."
+                  placeholder="Summarize your operational targets, tech stack, and scope..."
                 />
               </div>
 
@@ -202,72 +202,88 @@ export default function Contact() {
         {/* Direct Coordinates */}
         <section className="md:col-span-5 space-y-6">
           <div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-900/30 space-y-6">
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-850 pb-2">
-              Direct Channels
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-855 pb-2">
+              Direct Coordinates
             </h2>
 
             <div className="space-y-4">
               {/* Coordinate 1 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-xs font-semibold text-slate-400">Direct Email</h3>
                   <a
-                    href="mailto:alex.morgan.pm@example.com"
+                    href="mailto:udgatanikhil@gmail.com"
                     className="text-sm font-semibold text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                   >
-                    alex.morgan.pm@example.com
+                    udgatanikhil@gmail.com
                   </a>
                 </div>
               </div>
 
               {/* Coordinate 2 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                  <LinkedinIcon className="w-5 h-5" />
+                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
+                  <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold text-slate-400">LinkedIn Profile</h3>
+                  <h3 className="text-xs font-semibold text-slate-400">Contact Number</h3>
                   <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="tel:+917977229524"
                     className="text-sm font-semibold text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                   >
-                    linkedin.com/in/alex-morgan-pm
+                    +91 79772 29524
                   </a>
                 </div>
               </div>
 
               {/* Coordinate 3 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                  <GithubIcon className="w-5 h-5" />
+                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
+                  <LinkedinIcon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold text-slate-400">GitHub Codebase</h3>
+                  <h3 className="text-xs font-semibold text-slate-400">LinkedIn</h3>
                   <a
-                    href="https://github.com"
+                    href="https://linkedin.com/in/nikhiludgata"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-semibold text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                   >
-                    github.com/alex-morgan-tech
+                    linkedin.com/in/nikhiludgata
                   </a>
                 </div>
               </div>
 
               {/* Coordinate 4 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
+                  <GithubIcon className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold text-slate-400">GitHub</h3>
+                  <a
+                    href="https://github.com/nikhiludgata"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-slate-850 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                  >
+                    github.com/nikhiludgata
+                  </a>
+                </div>
+              </div>
+
+              {/* Coordinate 5 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-855 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold text-slate-400">Office Location</h3>
+                  <h3 className="text-xs font-semibold text-slate-400">Location</h3>
                   <p className="text-sm font-semibold text-slate-850 dark:text-slate-200">
-                    San Francisco, California
+                    Bengaluru, Karnataka, India
                   </p>
                 </div>
               </div>

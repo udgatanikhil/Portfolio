@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 28, 2026",
     readTime: "8 min read",
     category: "Generative AI",
-    author: "Alex Morgan"
+    author: "Nikhil Udgata"
   },
   {
     slug: "llm-guardrails-production",
@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     date: "May 15, 2026",
     readTime: "10 min read",
     category: "AI Operations",
-    author: "Alex Morgan"
+    author: "Nikhil Udgata"
   },
   {
     slug: "agile-metrics-data-products",
@@ -34,6 +34,6 @@ export const blogPosts: BlogPost[] = [
     date: "April 02, 2026",
     readTime: "6 min read",
     category: "Product Management",
-    author: "Alex Morgan"
+    author: "Nikhil Udgata"
   }
 ];

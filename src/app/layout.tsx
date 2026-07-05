@@ -20,21 +20,24 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Alex Morgan | Technical Project Manager | AI, Data & Software",
+  title: "Nikhil Udgata | Technical Project Manager | FinTech & AI",
   description:
-    "Professional portfolio of Alex Morgan, an enterprise-focused Technical Project & Product Manager specializing in Generative AI, RAG pipelines, CRM transformations, and high-scale automation.",
+    "Professional portfolio of Nikhil Udgata, a Technical Project Manager and Business Analyst specializing in digital lending journeys, RAG-based AI applications, healthcare CRM, and predictive risk analytics.",
   keywords: [
+    "Nikhil Udgata",
     "Technical Project Manager",
-    "Product Manager",
-    "Generative AI",
+    "Business Analyst",
+    "FinBox",
+    "LeadSquared",
+    "FinTech",
+    "AI",
     "RAG",
-    "Salesforce CRM",
-    "Machine Learning",
-    "Data Products",
-    "Software Engineering",
-    "Enterprise Solutions",
+    "Risk Analytics",
+    "Process Automation",
+    "Jira",
+    "Agile Delivery",
   ],
-  authors: [{ name: "Alex Morgan" }],
+  authors: [{ name: "Nikhil Udgata" }],
 };
 
 export default function RootLayout({

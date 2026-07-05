@@ -8,11 +8,11 @@ export default function About() {
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
           About Me
         </h1>
-        <p className="text-base text-slate-650 dark:text-slate-350 leading-relaxed">
-          I am Alex Morgan, a Senior Technical Project Manager with over 8 years of experience leading cross-functional teams in building scalable data systems, cloud platforms, and machine learning models. I specialize in taking highly technical, ambiguous concepts and turning them into structured project plans that deliver business-measurable results.
+        <p className="text-base text-slate-650 dark:text-slate-355 leading-relaxed">
+          I am Nikhil Udgata, a growth-oriented FinTech professional and Technical Project Manager with over 6 years of experience driving product execution, risk analytics, and cross-functional delivery. Based in Bengaluru, India, I specialize in leveraging data-driven decision making, product analytics, and database modeling to optimize complex financial products and enterprise systems.
         </p>
-        <p className="text-base text-slate-650 dark:text-slate-350 leading-relaxed">
-          Before transitioning to project and product management, I spent 3 years working as a software developer, specializing in data pipelines and distributed systems. Having a hand-on software engineering background allows me to communicate effectively with developers, review system architecture designs, and accurately evaluate engineering risks.
+        <p className="text-base text-slate-650 dark:text-slate-355 leading-relaxed">
+          Throughout my career at companies like FinBox, LeadSquared, and Odessa Technologies, I have successfully coordinated engineering, product, and client teams to deploy scalable APIs, integrate machine learning default-risk estimators, and build RAG-based AI search engines to streamline operations. My background combining a B.Tech in Computer Science and an MBA in Technology Management enables me to translate technical capability into business growth.
         </p>
       </section>
 
@@ -20,34 +20,34 @@ export default function About() {
       <section className="space-y-6">
         <div className="border-b border-slate-200 dark:border-slate-800 pb-3">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-            Project Management Philosophy
+            Project Delivery Philosophy
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-6">
           <div className="flex gap-4">
-            <div className="flex-shrink-0 w-8 h-8 rounded bg-indigo-50 dark:bg-indigo-950/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+            <div className="flex-shrink-0 w-8 h-8 rounded bg-indigo-50 dark:bg-indigo-950/40 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
               <Brain className="w-4 h-4" />
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 dark:text-white text-base">
-                1. Architecture First
+                1. Data-Driven Diagnostics
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
-                Project timelines cannot be decoupled from technical architecture. I spend time with technical leads to understand database schemas, network constraints, API contracts, and vector embeddings indexes before committing to roadmaps.
+                Rather than relying on qualitative assumptions, I build my project strategies around database analytics. I write SQL scripts to isolate onboarding friction points, analyze transaction dashboards to diagnose API drop-offs, and monitor real-time Grafana logs to catch failures early.
               </p>
             </div>
           </div>
 
           <div className="flex gap-4">
-            <div className="flex-shrink-0 w-8 h-8 rounded bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400">
+            <div className="flex-shrink-0 w-8 h-8 rounded bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-650 dark:text-teal-400">
               <CheckCircle className="w-4 h-4" />
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 dark:text-white text-base">
-                2. Uncompromised Quality & Testing
+                2. Regulatory & Architectural Compliance
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
-                A system is only as good as its reliability in production. I champion rigorous QA processes, performance monitoring, regression test automation, and safety evaluations when deploying customer-facing AI agents.
+                Working in FinTech and Healthcare requires strict compliance. I specialize in aligning software development lifecycles with HIPAA data encryption policies, IFRS and GAAP accounting guidelines, and secure B2B financial webhooks.
               </p>
             </div>
           </div>
@@ -58,10 +58,10 @@ export default function About() {
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 dark:text-white text-base">
-                3. Risk Mitigation & Clear Communication
+                3. Automation of Engineering Overhead
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
-                Identify blockers before they happen. By maintaining a clear dependency graph, conducting proactive spike tasks, and keeping channels of communication transparent, we minimize project delays and build trust.
+                I actively look for processes that can be streamlined with AI. Whether it is building indexing pipelines to search unstructured CRM policy data or deploying a RAG chatbot to parse JIRA commits and compile release summaries, I believe in minimizing administrative friction for developer pods.
               </p>
             </div>
           </div>
@@ -81,17 +81,17 @@ export default function About() {
             <div className="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-indigo-650 border border-white dark:border-slate-950"></div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <h3 className="font-bold text-slate-900 dark:text-white text-base">
-                Senior Technical Project Manager (AI Platforms)
+                Technical Project Manager
               </h3>
               <span className="text-xs font-mono bg-slate-100 dark:bg-slate-850 px-2 py-0.5 rounded text-slate-500 dark:text-slate-400">
-                2024 &ndash; Present
+                Nov 2025 &ndash; Present
               </span>
             </div>
-            <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-              Enterprise Tech Solutions Inc.
+            <p className="text-xs text-indigo-650 dark:text-indigo-400 font-medium">
+              FinBox — Bengaluru, India
             </p>
-            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Leading the delivery of internal generative AI engines, model fine-tuning platforms, and secure enterprise RAG products. Managing an agile team of 14, comprising data scientists, machine learning engineers, and frontend developers.
+            <p className="text-sm text-slate-650 dark:text-slate-400 leading-relaxed">
+              Leading product delivery and roadmap planning of B2B digital lending journeys, risk scoring engines, and API integrations. Deploying Grafana transaction-tracking metrics and developing custom internal RAG tools to automate JIRA release tracking.
             </p>
           </div>
 
@@ -100,17 +100,17 @@ export default function About() {
             <div className="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-600 border border-white dark:border-slate-950"></div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <h3 className="font-bold text-slate-900 dark:text-white text-base">
-                Technical Product & Project Manager (Data Systems)
+                Senior Business Analyst
               </h3>
               <span className="text-xs font-mono bg-slate-100 dark:bg-slate-850 px-2 py-0.5 rounded text-slate-500 dark:text-slate-400">
-                2021 &ndash; 2024
+                Nov 2024 &ndash; Oct 2025
               </span>
             </div>
-            <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-              Apex Global Analytics
+            <p className="text-xs text-indigo-650 dark:text-indigo-400 font-medium">
+              LeadSquared (LSQ) — Bengaluru, India
             </p>
-            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Managed the migration of legacy Oracle databases to Snowflake. Oversaw data pipeline reliability projects and standard CRM integration workflows. Worked directly with business leads to convert corporate KPIs into technical database specifications.
+            <p className="text-sm text-slate-650 dark:text-slate-400 leading-relaxed">
+              Oversaw HIPAA-compliant healthcare CRM deployments, gather user requirements, and draft PRDs. Spearheaded a RAG-based AI search model to index unstructured customer documentation, cutting patient onboarding cycles by 30%.
             </p>
           </div>
 
@@ -119,17 +119,17 @@ export default function About() {
             <div className="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-600 border border-white dark:border-slate-950"></div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <h3 className="font-bold text-slate-900 dark:text-white text-base">
-                Software Engineer (Data & Backend)
+                Business Analyst & Associate BA
               </h3>
               <span className="text-xs font-mono bg-slate-100 dark:bg-slate-850 px-2 py-0.5 rounded text-slate-500 dark:text-slate-400">
-                2018 &ndash; 2021
+                May 2020 &ndash; Oct 2024
               </span>
             </div>
-            <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-              Nexus Software Labs
+            <p className="text-xs text-indigo-650 dark:text-indigo-400 font-medium">
+              Odessa Technologies — Bengaluru, India
             </p>
-            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Developed distributed backend web services using Java and Python. Wrote data pipeline jobs using Apache Spark. Contributed to database migrations, optimization of slow queries, and third-party API configurations.
+            <p className="text-sm text-slate-650 dark:text-slate-400 leading-relaxed">
+              Managed asset finance software implementations for Tier-1 multinational clients under IFRS/GAAP models. Led auto-origination process automation and integrated scikit-learn Random Forest models to calculate default-risk scores, reducing credit losses by 40%.
             </p>
           </div>
         </div>
@@ -139,47 +139,27 @@ export default function About() {
       <section className="space-y-6">
         <div className="border-b border-slate-200 dark:border-slate-800 pb-3">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-            Professional Credentials
+            Certifications & Credentials
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="border border-slate-200 dark:border-slate-800 rounded-lg p-4 bg-slate-50/50 dark:bg-slate-900/20 flex items-center space-x-3">
             <Award className="text-indigo-650 dark:text-indigo-400 w-5 h-5 flex-shrink-0" />
             <div>
-              <p className="text-sm font-semibold text-slate-905 dark:text-white">
-                Project Management Professional (PMP)
+              <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                CFA Level 1 Passed
               </p>
-              <p className="text-xs text-slate-500">Project Management Institute (PMI)</p>
+              <p className="text-xs text-slate-500">CFA Institute (Level 2 Candidate - May 2026)</p>
             </div>
           </div>
 
           <div className="border border-slate-200 dark:border-slate-800 rounded-lg p-4 bg-slate-50/50 dark:bg-slate-900/20 flex items-center space-x-3">
             <Award className="text-indigo-650 dark:text-indigo-400 w-5 h-5 flex-shrink-0" />
             <div>
-              <p className="text-sm font-semibold text-slate-905 dark:text-white">
-                Certified Scrum Master (CSM)
+              <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                Data Science Honors
               </p>
-              <p className="text-xs text-slate-500">Scrum Alliance</p>
-            </div>
-          </div>
-
-          <div className="border border-slate-200 dark:border-slate-800 rounded-lg p-4 bg-slate-50/50 dark:bg-slate-900/20 flex items-center space-x-3">
-            <Award className="text-indigo-650 dark:text-indigo-400 w-5 h-5 flex-shrink-0" />
-            <div>
-              <p className="text-sm font-semibold text-slate-905 dark:text-white">
-                AWS Certified Solutions Architect
-              </p>
-              <p className="text-xs text-slate-500">Amazon Web Services (AWS)</p>
-            </div>
-          </div>
-
-          <div className="border border-slate-200 dark:border-slate-800 rounded-lg p-4 bg-slate-50/50 dark:bg-slate-900/20 flex items-center space-x-3">
-            <Award className="text-indigo-650 dark:text-indigo-400 w-5 h-5 flex-shrink-0" />
-            <div>
-              <p className="text-sm font-semibold text-slate-905 dark:text-white">
-                AI Product Management Certificate
-              </p>
-              <p className="text-xs text-slate-500">Product Development Association</p>
+              <p className="text-xs text-slate-500">WorldQuant University (Levels 1 & 2)</p>
             </div>
           </div>
         </div>

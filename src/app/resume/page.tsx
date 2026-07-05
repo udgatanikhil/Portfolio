@@ -10,11 +10,11 @@ export default function Resume() {
             Professional Resume
           </h1>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Structured curriculum vitae. Last updated: July 2026.
+            Nikhil Udgata &mdash; Technical Project Manager CV. Last updated: July 2026.
           </p>
         </div>
         <a
-          href="/resume.pdf"
+          href="/Nikhil_Udgata_Resume_Generic.pdf"
           download
           className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-indigo-600 hover:bg-indigo-750 text-white transition-all duration-200"
         >
@@ -29,7 +29,7 @@ export default function Resume() {
         <div className="md:col-span-8 space-y-10">
           {/* Work Experience */}
           <section className="space-y-6">
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-205 dark:border-slate-800 pb-2">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2">
               <Briefcase className="w-4 h-4 text-indigo-500" />
               Work Experience
             </h2>
@@ -39,24 +39,24 @@ export default function Resume() {
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <h3 className="font-bold text-slate-900 dark:text-white text-base">
-                    Senior Technical Project Manager (AI Platforms)
+                    Technical Project Manager
                   </h3>
                   <span className="text-xs font-mono text-slate-500 dark:text-slate-400 flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
-                    Jan 2024 &ndash; Present
+                    Nov 2025 &ndash; Present
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-indigo-650 dark:text-indigo-400 font-medium">
-                  <span>Enterprise Tech Solutions Inc.</span>
+                  <span>FinBox</span>
                   <span className="flex items-center gap-1 text-slate-400 font-normal">
-                    <MapPin className="w-3 h-3" /> San Francisco, CA (Hybrid)
+                    <MapPin className="w-3 h-3" /> Bengaluru, India
                   </span>
                 </div>
                 <ul className="list-disc pl-5 text-sm text-slate-650 dark:text-slate-350 space-y-1.5 pt-1">
-                  <li>Directing execution for 3 cross-functional teams developing LLM search orchestration engines and RAG applications, reducing client search latency by 45%.</li>
-                  <li>Drafting detailed PRDs, system architecture schemas, data governance protocols, and regression testing specifications.</li>
-                  <li>Coordinating release cycles using Agile Scrum methodologies; increased sprint delivery predictability from 74% to 92% in 6 months.</li>
-                  <li>Managing risk matrix logs, dependency trees across core API teams, and stakeholder expectations for Fortune 500 integrations.</li>
+                  <li>Own end-to-end product delivery, operational execution, and roadmap planning of B2B digital lending journeys, risk decisioning engines, and API integrations.</li>
+                  <li>Establish and monitor transaction volumes and status tracking dashboards using Grafana and SQL; resolved API/webhook drops to cut disbursement failure rates by 15%.</li>
+                  <li>Coordinate sprint backlog items in JIRA, run daily standups, and scope technical roadmaps across cross-functional engineering, compliance, and product pods.</li>
+                  <li>Designed and deployed an internal JIRA commit analysis tool utilizing a RAG-based LLM structure to automate release note summaries.</li>
                 </ul>
               </div>
 
@@ -64,24 +64,24 @@ export default function Resume() {
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <h3 className="font-bold text-slate-900 dark:text-white text-base">
-                    Technical Product & Project Manager (Data Systems)
+                    Senior Business Analyst
                   </h3>
                   <span className="text-xs font-mono text-slate-500 dark:text-slate-400 flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
-                    Sep 2021 &ndash; Jan 2024
+                    Nov 2024 &ndash; Oct 2025
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-indigo-650 dark:text-indigo-400 font-medium">
-                  <span>Apex Global Analytics</span>
+                  <span>LeadSquared (LSQ)</span>
                   <span className="flex items-center gap-1 text-slate-400 font-normal">
-                    <MapPin className="w-3 h-3" /> New York, NY
+                    <MapPin className="w-3 h-3" /> Bengaluru, India
                   </span>
                 </div>
-                <ul className="list-disc pl-5 text-sm text-slate-650 dark:text-slate-350 space-y-1.5 pt-1">
-                  <li>Managed database migration of 1.2M historical customer profiles from legacy Oracle setups to cloud-hosted Snowflake warehouse.</li>
-                  <li>Partnered with data engineering teams to model robust ETL pipelines using dbt, lowering pipeline failures by 38%.</li>
-                  <li>Oversaw custom Salesforce CRM integration flows that automated sales lead assignments, adding $1.8M in pipeline value.</li>
-                  <li>Authored project plans, capacity estimates, and technical documentation templates for internal developers.</li>
+                <ul className="list-disc pl-5 text-sm text-slate-650 dark:text-slate-355 space-y-1.5 pt-1">
+                  <li>Managed requirements scoping and customer lifecycles for HIPAA-compliant healthcare CRM product deployments.</li>
+                  <li>Delivered two major automated CRM workflow features that reduced customer onboarding cycle times by 30% and improved client retention by 18%.</li>
+                  <li>Spearheaded integration of RAG-based search engines within the CRM to automate document querying, improving CSAT scores by 15%.</li>
+                  <li>Tracked feature engagement metrics and cohort drop-off paths to drive data-backed improvements.</li>
                 </ul>
               </div>
 
@@ -89,24 +89,24 @@ export default function Resume() {
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <h3 className="font-bold text-slate-900 dark:text-white text-base">
-                    Software Engineer (Data & Backend)
+                    Business Analyst & Associate BA
                   </h3>
                   <span className="text-xs font-mono text-slate-500 dark:text-slate-400 flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
-                    Jun 2018 &ndash; Sep 2021
+                    May 2020 &ndash; Oct 2024
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-indigo-650 dark:text-indigo-400 font-medium">
-                  <span>Nexus Software Labs</span>
+                  <span>Odessa Technologies</span>
                   <span className="flex items-center gap-1 text-slate-400 font-normal">
-                    <MapPin className="w-3 h-3" /> Austin, TX
+                    <MapPin className="w-3 h-3" /> Bengaluru, India
                   </span>
                 </div>
-                <ul className="list-disc pl-5 text-sm text-slate-650 dark:text-slate-350 space-y-1.5 pt-1">
-                  <li>Designed and built secure, RESTful backend APIs utilizing Java (Spring Boot) and Python (Flask).</li>
-                  <li>Optimized complex PostgreSQL database queries, reducing data-loading speeds of executive dashboard reports by 60%.</li>
-                  <li>Configured automated continuous integration and delivery (CI/CD) pipelines on GitLab CI, shortening deployment times by 20 minutes.</li>
-                  <li>Collaborated with product teams to estimate developer story points and draft technical feasibility specifications.</li>
+                <ul className="list-disc pl-5 text-sm text-slate-650 dark:text-slate-355 space-y-1.5 pt-1">
+                  <li>Managed multi-million dollar asset finance software integrations for Tier-1 global enterprise clients under strict IFRS/GAAP schemas.</li>
+                  <li>Reviewed change requests, authored functional specifications, and integrated Random Forest classification ML models to evaluate lease default risk (reducing credit losses by 40%).</li>
+                  <li>Automated daily general ledger and sub-ledger reconciliation loops using optimized T-SQL scripts, saving accounting teams 8+ manual hours weekly.</li>
+                  <li>Led auto finance origination workflow automations that reduced loan/lease processing times by 25%.</li>
                 </ul>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function Resume() {
 
           {/* Education */}
           <section className="space-y-6">
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-205 dark:border-slate-800 pb-2">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2">
               <GraduationCap className="w-4 h-4 text-indigo-500" />
               Education
             </h2>
@@ -123,27 +123,25 @@ export default function Resume() {
               <div className="space-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <h3 className="font-bold text-slate-905 dark:text-white text-sm">
-                    M.S. in Management Science & Engineering
+                    MBA in Technology Management
                   </h3>
-                  <span className="text-xs font-mono text-slate-500">2016 &ndash; 2018</span>
+                  <span className="text-xs font-mono text-slate-500">2018 &ndash; 2020</span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400">
-                  Stanford University, Stanford, CA
+                <p className="text-xs text-slate-605 dark:text-slate-400">
+                  SVKM&rsquo;s NMIMS, Mumbai, India
                 </p>
-                <p className="text-xs text-slate-500 font-mono">Specialization: Operations Research & Systems Engineering</p>
               </div>
 
               <div className="space-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <h3 className="font-bold text-slate-905 dark:text-white text-sm">
-                    B.S. in Computer Science
+                    B.Tech. in Computer Science
                   </h3>
-                  <span className="text-xs font-mono text-slate-500">2012 &ndash; 2016</span>
+                  <span className="text-xs font-mono text-slate-500">2015 &ndash; 2018</span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400">
-                  University of Texas at Austin, Austin, TX
+                <p className="text-xs text-slate-605 dark:text-slate-400">
+                  SVKM&rsquo;s NMIMS, Mumbai, India
                 </p>
-                <p className="text-xs text-slate-500 font-mono">Graduated with High Honors (Magna Cum Laude)</p>
               </div>
             </div>
           </section>
@@ -162,10 +160,10 @@ export default function Resume() {
               {/* Category 1 */}
               <div className="space-y-2">
                 <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-500">
-                  AI & Data Science
+                  Growth & Analytics
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["GPT-4 / Azure OpenAI", "LangChain", "Vector Databases", "Model Evaluation", "Pinecone DB", "Python"].map((s) => (
+                  {["Product Analytics", "Cohort Analysis", "KPI Tracking", "Funnel Optimizations", "Customer Lifecycles", "Data Diagnostics"].map((s) => (
                     <span
                       key={s}
                       className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs px-2.5 py-1 rounded text-slate-700 dark:text-slate-300 font-mono"
@@ -178,11 +176,11 @@ export default function Resume() {
 
               {/* Category 2 */}
               <div className="space-y-2">
-                <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-500">
-                  Data Infrastructure
+                <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-505">
+                  Product & Operations
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Snowflake", "dbt", "PostgreSQL", "SQL (Advanced)", "ETL/ELT", "Apache Spark"].map((s) => (
+                  {["Product Delivery", "Roadmap Planning", "Jira Stories", "Standups", "Agile Execution", "Process Mapping", "GL Reconciliation"].map((s) => (
                     <span
                       key={s}
                       className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs px-2.5 py-1 rounded text-slate-700 dark:text-slate-300 font-mono"
@@ -195,28 +193,11 @@ export default function Resume() {
 
               {/* Category 3 */}
               <div className="space-y-2">
-                <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-500">
-                  PM & Agile Tools
+                <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-505">
+                  Technology & Frameworks
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Jira / Confluence", "Asana", "PRD Authoring", "Capacity Planning", "Risk Mapping", "MS Project"].map((s) => (
-                    <span
-                      key={s}
-                      className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs px-2.5 py-1 rounded text-slate-700 dark:text-slate-300 font-mono"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Category 4 */}
-              <div className="space-y-2">
-                <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-500">
-                  Systems & Deployment
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {["AWS (SageMaker, S3, EC2)", "Docker", "Git / GitHub Actions", "Salesforce API", "UiPath RPA", "REST APIs"].map((s) => (
+                  {["SQL (T-SQL/Postgres)", "Python", "Power BI", "RAG Systems", "LlamaIndex", "Grafana Dashboards", "API Integrations", "Webhooks", "Git"].map((s) => (
                     <span
                       key={s}
                       className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs px-2.5 py-1 rounded text-slate-700 dark:text-slate-300 font-mono"
@@ -238,23 +219,16 @@ export default function Resume() {
             <div className="space-y-3">
               <div className="border border-slate-200 dark:border-slate-800 rounded-lg p-3 bg-slate-50/50 dark:bg-slate-900/30">
                 <p className="text-xs font-bold text-slate-900 dark:text-slate-200">
-                  Project Management Professional (PMP)
+                  CFA Level 1 Passed
                 </p>
-                <p className="text-[10px] text-slate-400">License #2948293 — Issued 2022</p>
+                <p className="text-[10px] text-slate-400">Level 2 Candidate &mdash; Exam May 2026</p>
               </div>
 
               <div className="border border-slate-200 dark:border-slate-800 rounded-lg p-3 bg-slate-50/50 dark:bg-slate-900/30">
                 <p className="text-xs font-bold text-slate-900 dark:text-slate-200">
-                  Certified Scrum Master (CSM)
+                  Data Science Honors
                 </p>
-                <p className="text-[10px] text-slate-400">Scrum Alliance — Issued 2020</p>
-              </div>
-
-              <div className="border border-slate-200 dark:border-slate-800 rounded-lg p-3 bg-slate-50/50 dark:bg-slate-900/30">
-                <p className="text-xs font-bold text-slate-900 dark:text-slate-200">
-                  AWS Certified Solutions Architect
-                </p>
-                <p className="text-[10px] text-slate-400">Amazon Web Services — Issued 2021</p>
+                <p className="text-[10px] text-slate-400">WorldQuant University (Levels 1 & 2)</p>
               </div>
             </div>
           </section>

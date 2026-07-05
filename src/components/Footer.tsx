@@ -46,16 +46,16 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-sm font-semibold text-slate-850 dark:text-slate-200">
-              Alex Morgan
+              Nikhil Udgata
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Technical Project Manager — AI, Data & Software Products
+              Technical Project Manager — FinTech & AI Products
             </p>
           </div>
 
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/nikhiludgata"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 dark:text-slate-400 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
@@ -64,7 +64,7 @@ export default function Footer() {
               <GithubIcon className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/nikhiludgata"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 dark:text-slate-400 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
@@ -73,7 +73,7 @@ export default function Footer() {
               <LinkedinIcon className="w-5 h-5" />
             </a>
             <a
-              href="mailto:alex.morgan.pm@example.com"
+              href="mailto:udgatanikhil@gmail.com"
               className="text-slate-500 dark:text-slate-400 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
               aria-label="Email Contact"
             >
@@ -83,7 +83,7 @@ export default function Footer() {
 
           <div>
             <p className="text-xs text-slate-400 dark:text-slate-500">
-              &copy; {currentYear} Alex Morgan. All rights reserved.
+              &copy; {currentYear} Nikhil Udgata. All rights reserved.
             </p>
           </div>
         </div>
