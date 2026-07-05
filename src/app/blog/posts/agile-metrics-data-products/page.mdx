@@ -1,0 +1,50 @@
+# Why Standard Agile Metrics Fail for Data & Machine Learning Products
+
+*Published on April 02, 2026 • 6 min read • Category: Product Management*
+
+In traditional software engineering, tasks are deterministic. If you assign a developer to build a login page or add a button, they can estimate the work with high confidence. Velocity is stable, burndown charts are linear, and sprints are predictable.
+
+In data science, machine learning, and data engineering, tasks are highly probabilistic. You cannot estimate how long it will take to improve a model's accuracy from 82% to 90%, because it depends on data quality, feature engineering, and experimentation.
+
+Here is why standard Agile metrics fail for data products, and how to adapt your processes as a Technical Project Manager.
+
+---
+
+## The Failures of Traditional Agile
+
+### 1. Story Point Inflation
+Engineers estimating ML model training tasks often pad estimates because they cannot predict what blockers they will run into. This inflates sprint velocity, rendering capacity planning useless.
+
+### 2. The Perpetual Sprint Carry-Over
+Because data exploration and model tuning can take weeks of non-linear experimentation, tasks are rarely completed in a single 2-week sprint. Standard burndown charts look like cliffs rather than slopes.
+
+### 3. Velocity Focuses on Output, Not Outcome
+Velocity measures completed story points (e.g., number of features built). For data products, a data scientist could build ten pipelines, but if the model quality does not improve, no value was delivered.
+
+---
+
+## How to Adapt Agile for Data Teams
+
+As a Technical PM, you should implement these four modifications to make Agile work for your data science and engineering teams:
+
+### 1. Introduce "Spikes" for Exploration
+Never estimate a complex model-building task without a preceding exploration spike. A spike is a time-boxed task (typically 2–3 days) dedicated to testing data feasibility, running initial baseline experiments, and evaluating data quality. Only estimate the main task *after* the spike is complete.
+
+### 2. Measure "Experiment Throughput" instead of Velocity
+Track how many hypothesis tests the data team ran during a sprint. A high-performing data team runs multiple parallel experiments to eliminate paths that do not yield results.
+
+### 3. Estimate in Milestones, Not Sprints
+Structure data projects around phases:
+* Phase 1: Data Ingestion & Cleaning (Highly predictable)
+* Phase 2: Feature Engineering & Exploration (Semi-predictable)
+* Phase 3: Model Training & Tuning (Low predictability - time-box this phase)
+* Phase 4: Model Deployment & API wraps (Highly predictable)
+
+### 4. Separate Data Engineering from Data Science
+Data engineering tasks (building pipelines, writing dbt models, scheduling Airflow DAGs) are deterministic. Keep them in standard sprints. Keep your data science modeling tasks in a separate Kanban queue focused on hypothesis testing and model validation.
+
+---
+
+## Conclusion
+
+To manage data products successfully, you must embrace uncertainty. By adapting standard Agile frameworks to focus on time-boxed exploration and hypothesis velocity, you enable your engineering teams to build better data products without process overhead.

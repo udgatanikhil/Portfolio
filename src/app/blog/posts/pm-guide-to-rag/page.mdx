@@ -1,0 +1,48 @@
+# A Project Manager's Guide to Retrieval-Augmented Generation (RAG)
+
+*Published on June 28, 2026 • 8 min read • Category: Generative AI*
+
+Large Language Models (LLMs) are incredibly powerful, but out of the box, they suffer from two major limitations: knowledge cutoff dates and hallucinations. For enterprise applications, these limitations are dealbreakers.
+
+Enter Retrieval-Augmented Generation (RAG). RAG is a design pattern that fetches relevant context from an external database and feeds it to the LLM alongside the user prompt. As a Project Manager, you don't need to write the embedding algorithms, but you do need to manage the trade-offs of RAG systems.
+
+---
+
+## The Three Core Pillars of RAG
+
+Understanding RAG requires breaking it down into three distinct phases:
+
+1. **Ingestion Pipeline**: The process of extracting text from files (PDFs, Word docs, spreadsheets), splitting it into smaller "chunks," generating numerical representations (embeddings) of those chunks, and saving them into a vector database.
+2. **Retrieval**: When a user inputs a query, the system converts that query into an embedding, searches the vector database for the most mathematically similar chunks, and pulls them.
+3. **Generation**: The system takes the retrieved chunks, merges them with the user's original question into a template (prompt), and sends it to the LLM to write a coherent response.
+
+---
+
+## Managing the Trade-offs: The PM Matrix
+
+When managing a RAG product, your role is to guide engineers through trade-offs. Here is the framework I use:
+
+### 1. Chunk Size vs. Context Window
+* **The Trade-off**: Small chunks (e.g., 200 words) give precise information but might miss global context. Large chunks (e.g., 1000 words) preserve context but cost more in token fees and can dilute the LLM's attention.
+* **PM Decision**: Optimize chunk size based on documentation type. Form contracts need large chunks; FAQs need small chunks.
+
+### 2. Retrieval Speed vs. Retrieval Quality
+* **The Trade-off**: Adding a "reranker" (a second model that audits the search results) improves retrieval accuracy by up to 20%, but adds 300ms–800ms of latency.
+* **PM Decision**: For interactive chat widgets, latency is king. Skip rerankers or use async pre-fetching. For compliance audits, accuracy is king; use the reranker.
+
+### 3. Vector Database Selection
+* **The Trade-off**: Dedicated vector databases (Pinecone, Qdrant) scale to millions of documents easily. Relational databases with vector extensions (pgvector) are easier to manage and utilize existing infrastructure.
+* **PM Decision**: Start with pgvector if you already use PostgreSQL. Migrate to Pinecone only when document count exceeds 100,000 or search latency degrades.
+
+---
+
+## Key Metrics to Track (KPIs)
+
+To evaluate your RAG pipeline, don't rely on generic "it looks good" feedback. Measure these four metrics:
+
+* **Context Precision**: Out of all the chunks retrieved, how many were actually relevant?
+* **Context Recall**: Did the system retrieve all the necessary information to answer the question?
+* **Faithfulness (Hallucination Rate)**: Is the LLM's answer derived *only* from the retrieved context, or did it invent details?
+* **Answer Relevance**: Does the final response directly address the user's query?
+
+By setting up evaluation benchmarks (using tools like Ragas or TruLens) during the proof-of-concept phase, you avoid launching an AI system that hallucinates regulatory details.
