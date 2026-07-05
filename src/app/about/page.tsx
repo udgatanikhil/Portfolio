@@ -13,17 +13,17 @@ export default function About() {
             About Me
           </h2>
         </div>
-        <p className="text-base text-slate-650 dark:text-slate-350 leading-relaxed font-light">
+        <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed font-light">
           I am Nikhil Udgata, a growth-oriented FinTech professional and Technical Project Manager with over 6 years of experience driving product execution, risk analytics, and cross-functional delivery. Based in Bengaluru, India, I specialize in leveraging data-driven decision making, product analytics, and database modeling to optimize complex financial products and enterprise systems.
         </p>
-        <p className="text-base text-slate-650 dark:text-slate-355 leading-relaxed font-light">
+        <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed font-light">
           Throughout my career at companies like FinBox, LeadSquared, and Odessa Technologies, I have successfully coordinated engineering, product, and client teams to deploy scalable APIs, integrate machine learning default-risk estimators, and build RAG-based AI search engines to streamline operations. My background combining a B.Tech in Computer Science and an MBA in Technology Management enables me to translate technical capability into business growth.
         </p>
       </section>
 
       {/* Leadership Philosophy */}
       <section className="space-y-8">
-        <div className="border-b border-slate-100 dark:border-slate-850 pb-3">
+        <div className="border-b border-slate-100 dark:border-slate-800 pb-3">
           <h3 className="text-lg font-bold text-slate-900 dark:text-white">
             Project Delivery Philosophy
           </h3>
@@ -31,11 +31,11 @@ export default function About() {
         
         <div className="grid grid-cols-1 gap-8">
           <div className="flex gap-5">
-            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-indigo-50/50 dark:bg-indigo-950/20 flex items-center justify-center text-brand-indigo">
+            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-indigo-50 dark:bg-indigo-950/40 flex items-center justify-center text-indigo-650 dark:text-indigo-400">
               <Brain className="w-5 h-5" />
             </div>
             <div className="space-y-1">
-              <h4 className="font-semibold text-slate-905 dark:text-white text-base">
+              <h4 className="font-semibold text-slate-900 dark:text-white text-base">
                 1. Data-Driven Diagnostics
               </h4>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
@@ -45,11 +45,11 @@ export default function About() {
           </div>
 
           <div className="flex gap-5">
-            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-teal-50/50 dark:bg-teal-950/20 flex items-center justify-center text-teal-650 dark:text-teal-400">
+            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-650 dark:text-teal-400">
               <CheckCircle className="w-5 h-5" />
             </div>
             <div className="space-y-1">
-              <h4 className="font-semibold text-slate-905 dark:text-white text-base">
+              <h4 className="font-semibold text-slate-900 dark:text-white text-base">
                 2. Regulatory & Architectural Compliance
               </h4>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
@@ -59,11 +59,11 @@ export default function About() {
           </div>
 
           <div className="flex gap-5">
-            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-sky-50/50 dark:bg-sky-950/20 flex items-center justify-center text-brand-sky">
+            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-sky-50 dark:bg-sky-950/40 flex items-center justify-center text-sky-600 dark:text-sky-400">
               <ShieldAlert className="w-5 h-5" />
             </div>
             <div className="space-y-1">
-              <h4 className="font-semibold text-slate-905 dark:text-white text-base">
+              <h4 className="font-semibold text-slate-900 dark:text-white text-base">
                 3. Automation of Engineering Overhead
               </h4>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
@@ -76,8 +76,8 @@ export default function About() {
 
       {/* Career Timeline */}
       <section className="space-y-8">
-        <div className="border-b border-slate-100 dark:border-slate-850 pb-3">
-          <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+        <div className="border-b border-slate-100 dark:border-slate-800 pb-3">
+          <h3 className="text-lg font-bold text-slate-905 dark:text-white">
             Career Journey
           </h3>
         </div>
@@ -85,7 +85,7 @@ export default function About() {
         <div className="space-y-8 pl-4 border-l border-slate-200 dark:border-slate-800 ml-2">
           {/* Item 1 */}
           <div className="relative space-y-2">
-            <div className="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-brand-indigo border border-white dark:border-slate-950"></div>
+            <div className="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-indigo-600 dark:bg-indigo-400 border border-white dark:border-slate-950"></div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <h4 className="font-bold text-slate-900 dark:text-white text-base">
                 Technical Project Manager
@@ -94,10 +94,10 @@ export default function About() {
                 Nov 2025 &ndash; Present
               </span>
             </div>
-            <p className="text-xs text-brand-indigo font-medium font-mono uppercase tracking-wider">
+            <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium font-mono uppercase tracking-wider">
               FinBox — Bengaluru, India
             </p>
-            <p className="text-sm text-slate-650 dark:text-slate-400 leading-relaxed font-light">
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
               Leading product delivery and roadmap planning of B2B digital lending journeys, risk scoring engines, and API integrations. Deploying Grafana transaction-tracking metrics and developing custom internal RAG tools to automate JIRA release tracking.
             </p>
           </div>
@@ -109,14 +109,14 @@ export default function About() {
               <h4 className="font-bold text-slate-900 dark:text-white text-base">
                 Senior Business Analyst
               </h4>
-              <span className="text-xs font-mono bg-slate-100 dark:bg-slate-850 px-2 py-0.5 rounded text-slate-500 dark:text-slate-400">
+              <span className="text-xs font-mono bg-slate-100 dark:bg-slate-855 px-2 py-0.5 rounded text-slate-500 dark:text-slate-400">
                 Nov 2024 &ndash; Oct 2025
               </span>
             </div>
-            <p className="text-xs text-brand-indigo font-medium font-mono uppercase tracking-wider">
+            <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium font-mono uppercase tracking-wider">
               LeadSquared (LSQ) — Bengaluru, India
             </p>
-            <p className="text-sm text-slate-650 dark:text-slate-400 leading-relaxed font-light">
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
               Oversaw HIPAA-compliant healthcare CRM deployments, gather user requirements, and draft PRDs. Spearheaded a RAG-based AI search model to index unstructured customer documentation, cutting patient onboarding cycles by 30%.
             </p>
           </div>
@@ -128,14 +128,14 @@ export default function About() {
               <h4 className="font-bold text-slate-900 dark:text-white text-base">
                 Business Analyst & Associate BA
               </h4>
-              <span className="text-xs font-mono bg-slate-100 dark:bg-slate-850 px-2 py-0.5 rounded text-slate-500 dark:text-slate-400">
+              <span className="text-xs font-mono bg-slate-100 dark:bg-slate-855 px-2 py-0.5 rounded text-slate-500 dark:text-slate-400">
                 May 2020 &ndash; Oct 2024
               </span>
             </div>
-            <p className="text-xs text-brand-indigo font-medium font-mono uppercase tracking-wider">
+            <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium font-mono uppercase tracking-wider">
               Odessa Technologies — Bengaluru, India
             </p>
-            <p className="text-sm text-slate-650 dark:text-slate-400 leading-relaxed font-light">
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
               Managed asset finance software implementations for Tier-1 multinational clients under IFRS/GAAP models. Led auto-origination process automation and integrated scikit-learn Random Forest models to calculate default-risk scores, reducing credit losses by 40%.
             </p>
           </div>
@@ -144,7 +144,7 @@ export default function About() {
 
       {/* Certifications / Awards */}
       <section className="space-y-8">
-        <div className="border-b border-slate-100 dark:border-slate-850 pb-3">
+        <div className="border-b border-slate-100 dark:border-slate-805 pb-3">
           <h3 className="text-lg font-bold text-slate-900 dark:text-white">
             Professional Credentials
           </h3>
@@ -152,26 +152,26 @@ export default function About() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="premium-card rounded-xl p-5 flex items-center space-x-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-50/50 dark:bg-indigo-950/20 flex items-center justify-center text-brand-indigo">
+            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
               <Award className="w-5 h-5" />
             </div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900 dark:text-white">
                 CFA Level 1 Passed
               </h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">CFA Institute (Level 2 Candidate)</p>
+              <p className="text-xs text-slate-500 dark:text-slate-405 mt-0.5">CFA Institute (Level 2 Candidate)</p>
             </div>
           </div>
 
           <div className="premium-card rounded-xl p-5 flex items-center space-x-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-50/50 dark:bg-indigo-950/20 flex items-center justify-center text-brand-indigo">
+            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
               <Award className="w-5 h-5" />
             </div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900 dark:text-white">
                 Data Science Honors
               </h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">WorldQuant University (Levels 1 & 2)</p>
+              <p className="text-xs text-slate-500 dark:text-slate-405 mt-0.5">WorldQuant University (Levels 1 & 2)</p>
             </div>
           </div>
         </div>

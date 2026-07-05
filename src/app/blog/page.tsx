@@ -15,7 +15,7 @@ export default function Blog() {
             Technical & Product Blog
           </h2>
         </div>
-        <p className="text-base text-slate-650 dark:text-slate-350 leading-relaxed font-light">
+        <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed font-light">
           Articles exploring the intersections of Artificial Intelligence, product management metrics, 
           data architecture, and agile methodologies. Written for developers, project managers, and tech leaders.
         </p>
@@ -26,10 +26,10 @@ export default function Blog() {
         {blogPosts.map((post) => (
           <article
             key={post.slug}
-            className="group relative flex flex-col items-start border-b border-slate-100 dark:border-slate-800/80 pb-8 last:border-b-0 last:pb-0"
+            className="group relative flex flex-col items-start border-b border-slate-100 dark:border-slate-800 pb-8 last:border-b-0 last:pb-0"
           >
             <div className="flex items-center gap-3 text-[10px] font-mono text-slate-400 dark:text-slate-500 mb-3 uppercase tracking-wider">
-              <span className="font-semibold text-brand-indigo">
+              <span className="font-semibold text-indigo-600 dark:text-indigo-400">
                 {post.category}
               </span>
               <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></span>
@@ -44,7 +44,7 @@ export default function Blog() {
               </span>
             </div>
 
-            <h3 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-brand-indigo transition-colors duration-300">
+            <h3 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
               <Link href={`/blog/posts/${post.slug}`}>
                 {post.title}
               </Link>
@@ -56,7 +56,7 @@ export default function Blog() {
 
             <Link
               href={`/blog/posts/${post.slug}`}
-              className="text-xs font-semibold text-brand-indigo hover:text-indigo-700 mt-4 inline-flex items-center group/link"
+              className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 mt-4 inline-flex items-center group/link"
             >
               Read full post
               <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover/link:translate-x-0.5" />
