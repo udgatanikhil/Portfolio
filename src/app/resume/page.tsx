@@ -2,24 +2,24 @@ import { Download, Calendar, MapPin, Briefcase, GraduationCap, Award, BookOpen }
 
 export default function Resume() {
   return (
-    <div className="space-y-12 max-w-4xl mx-auto py-6 md:py-12 animate-fade-up">
+    <div className="space-y-12 max-w-4xl mx-auto py-8 md:py-16 animate-fade-up">
       {/* Page Header with Action Button */}
-      <section className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-cyan-950 pb-6">
+      <section className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-900 pb-6">
         <div className="space-y-1">
-          <h1 className="text-xs font-mono tracking-widest uppercase text-cyan-500">
-            [IDENT_DOSSIER] // MODULE_03
+          <h1 className="text-xs font-mono tracking-widest uppercase text-cyan-400">
+            Resume
           </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-white stark-title font-mono">
-            NIKHIL_UDGATA_DOSSIER.log
+          <h2 className="text-3xl font-bold tracking-tight text-white font-sans">
+            Nikhil Udgata
           </h2>
         </div>
         <a
           href="/Nikhil_Udgata_Resume_Generic.pdf"
           download
-          className="hud-corner inline-flex items-center justify-center px-4 py-2.5 rounded text-xs font-mono tracking-widest bg-cyan-950/20 border border-cyan-500/30 hover:border-cyan-400 text-cyan-400 transition-all duration-300 hover:scale-[1.01]"
+          className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-mono tracking-widest bg-cyan-950/20 border border-cyan-500/30 hover:border-cyan-400 text-cyan-400 transition-all duration-300 hover:scale-[1.01]"
         >
-          <Download className="w-4 h-4 mr-2 animate-bounce" />
-          EXPORT_PDF_DOSSIER
+          <Download className="w-4 h-4 mr-2" />
+          Download PDF
         </a>
       </section>
 
@@ -29,30 +29,30 @@ export default function Resume() {
         <div className="md:col-span-8 space-y-12">
           {/* Work Experience */}
           <section className="space-y-8">
-            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-500 flex items-center gap-2 border-b border-cyan-950 pb-2.5">
+            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-500 flex items-center gap-2 border-b border-slate-900 pb-2.5">
               <Briefcase className="w-4 h-4 text-cyan-400" />
-              01 // DEPLOYMENT_HISTORY
+              Work History
             </h3>
 
             <div className="space-y-8">
               {/* Job 1 */}
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-white text-sm font-mono tracking-wider">
-                    TECHNICAL PROJECT MANAGER // STARK_v4
+                  <h4 className="font-bold text-white text-base tracking-wide">
+                    Technical Project Manager
                   </h4>
                   <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-cyan-500" />
-                    NOV 2025 &ndash; PRESENT
+                    Nov 2025 &ndash; Present
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-cyan-450 font-medium font-mono uppercase tracking-wider">
+                <div className="flex items-center justify-between text-xs text-cyan-400 font-mono tracking-wider">
                   <span>FinBox</span>
                   <span className="flex items-center gap-1 text-slate-500 font-normal">
-                    <MapPin className="w-3 h-3" /> BENGALURU, INDIA
+                    <MapPin className="w-3 h-3" /> Bengaluru, India
                   </span>
                 </div>
-                <ul className="list-disc pl-5 text-xs text-slate-400 space-y-1.5 pt-1.5 font-mono font-light leading-relaxed">
+                <ul className="list-disc pl-5 text-xs text-slate-400 space-y-1.5 pt-1.5 leading-relaxed font-light">
                   <li>Own end-to-end product delivery, operational execution, and roadmap planning of B2B digital lending journeys, risk decisioning engines, and API integrations.</li>
                   <li>Establish and monitor transaction volumes and status tracking dashboards using Grafana and SQL; resolved API/webhook drops to cut disbursement failure rates by 15%.</li>
                   <li>Coordinate sprint backlog items in JIRA, run daily standups, and scope technical roadmaps across cross-functional engineering, compliance, and product pods.</li>
@@ -63,21 +63,21 @@ export default function Resume() {
               {/* Job 2 */}
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-white text-sm font-mono tracking-wider">
-                    SENIOR BUSINESS ANALYST // STARK_v3
+                  <h4 className="font-bold text-white text-base tracking-wide">
+                    Senior Business Analyst
                   </h4>
                   <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-cyan-500" />
-                    NOV 2024 &ndash; OCT 2025
+                    Nov 2024 &ndash; Oct 2025
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-cyan-450 font-medium font-mono uppercase tracking-wider">
+                <div className="flex items-center justify-between text-xs text-cyan-400 font-mono tracking-wider">
                   <span>LeadSquared (LSQ)</span>
                   <span className="flex items-center gap-1 text-slate-500 font-normal">
-                    <MapPin className="w-3 h-3" /> BENGALURU, INDIA
+                    <MapPin className="w-3 h-3" /> Bengaluru, India
                   </span>
                 </div>
-                <ul className="list-disc pl-5 text-xs text-slate-400 space-y-1.5 pt-1.5 font-mono font-light leading-relaxed">
+                <ul className="list-disc pl-5 text-xs text-slate-400 space-y-1.5 pt-1.5 leading-relaxed font-light">
                   <li>Managed requirements scoping and customer lifecycles for HIPAA-compliant healthcare CRM product deployments.</li>
                   <li>Delivered two major automated CRM workflow features that reduced customer onboarding cycle times by 30% and improved client retention by 18%.</li>
                   <li>Spearheaded integration of RAG-based search engines within the CRM to automate document querying, improving CSAT scores by 15%.</li>
@@ -88,22 +88,22 @@ export default function Resume() {
               {/* Job 3 */}
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-white text-sm font-mono tracking-wider">
-                    BUSINESS ANALYST & ASSOCIATE BA // STARK_v2
+                  <h4 className="font-bold text-white text-base tracking-wide">
+                    Business Analyst & Associate BA
                   </h4>
-                  <span className="text-[10px] font-mono text-slate-555 flex items-center gap-1">
+                  <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-cyan-500" />
-                    MAY 2020 &ndash; OCT 2024
+                    May 2020 &ndash; Oct 2024
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-cyan-450 font-medium font-mono uppercase tracking-wider">
+                <div className="flex items-center justify-between text-xs text-cyan-400 font-mono tracking-wider">
                   <span>Odessa Technologies</span>
                   <span className="flex items-center gap-1 text-slate-500 font-normal">
-                    <MapPin className="w-3 h-3" /> BENGALURU, INDIA
+                    <MapPin className="w-3 h-3" /> Bengaluru, India
                   </span>
                 </div>
-                <ul className="list-disc pl-5 text-xs text-slate-400 space-y-1.5 pt-1.5 font-mono font-light leading-relaxed">
-                  <li>Managed multi-million dollar asset finance software integrations for Tier-1 global enterprise clients under strict IFRS/GAAP schemas.</li>
+                <ul className="list-disc pl-5 text-xs text-slate-400 space-y-1.5 pt-1.5 leading-relaxed font-light">
+                  <li>Managed multi-million dollar asset finance software implementations for Tier-1 global enterprise clients under strict IFRS/GAAP schemas.</li>
                   <li>Reviewed change requests, authored functional specifications, and integrated Random Forest classification ML models to evaluate lease default risk (reducing credit losses by 40%).</li>
                   <li>Automated daily general ledger and sub-ledger reconciliation loops using optimized T-SQL scripts, saving accounting teams 8+ manual hours weekly.</li>
                   <li>Led auto finance origination workflow automations that reduced loan/lease processing times by 25%.</li>
@@ -114,33 +114,33 @@ export default function Resume() {
 
           {/* Education */}
           <section className="space-y-6">
-            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-500 flex items-center gap-2 border-b border-cyan-950 pb-2.5">
+            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-505 flex items-center gap-2 border-b border-slate-900 pb-2.5">
               <GraduationCap className="w-4 h-4 text-cyan-400" />
-              02 // EDUCATION_SCHEMATICS
+              Education
             </h3>
 
             <div className="space-y-6">
               <div className="space-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-white text-sm font-mono tracking-wider">
-                    MBA IN TECHNOLOGY MANAGEMENT
+                  <h4 className="font-bold text-white text-sm tracking-wide">
+                    MBA in Technology Management
                   </h4>
                   <span className="text-xs font-mono text-slate-500">2018 &ndash; 2020</span>
                 </div>
                 <p className="text-xs text-slate-500 font-mono uppercase tracking-wider">
-                  SVKM&rsquo;s NMIMS // MUMBAI, INDIA
+                  SVKM&rsquo;s NMIMS // Mumbai, India
                 </p>
               </div>
 
               <div className="space-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="font-bold text-white text-sm font-mono tracking-wider">
-                    B.TECH. IN COMPUTER SCIENCE
+                  <h4 className="font-bold text-white text-sm tracking-wide">
+                    B.Tech. in Computer Science
                   </h4>
                   <span className="text-xs font-mono text-slate-500">2015 &ndash; 2018</span>
                 </div>
                 <p className="text-xs text-slate-500 font-mono uppercase tracking-wider">
-                  SVKM&rsquo;s NMIMS // MUMBAI, INDIA
+                  SVKM&rsquo;s NMIMS // Mumbai, India
                 </p>
               </div>
             </div>
@@ -151,22 +151,22 @@ export default function Resume() {
         <div className="md:col-span-4 space-y-12">
           {/* Skills Grid */}
           <section className="space-y-6">
-            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-500 flex items-center gap-2 border-b border-cyan-950 pb-2.5">
+            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-555 flex items-center gap-2 border-b border-slate-900 pb-2.5">
               <BookOpen className="w-4 h-4 text-cyan-400" />
-              03 // SKILLSET_TELEMETRY
+              Skills
             </h3>
 
             <div className="space-y-6">
               {/* Category 1 */}
               <div className="space-y-2.5">
                 <h4 className="text-[9px] font-mono tracking-widest uppercase text-cyan-500">
-                  // GROWTH_AND_ANALYTICS
+                  Analytics
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {["Product Analytics", "Cohort Analysis", "KPI Tracking", "Funnel Optimizations", "Customer Lifecycles", "Data Diagnostics"].map((s) => (
                     <span
                       key={s}
-                      className="bg-cyan-950/10 border border-cyan-500/20 text-[10px] px-2 py-1 rounded text-cyan-400 font-mono"
+                      className="bg-cyan-950/10 border border-cyan-500/20 text-[10px] px-2.5 py-1 rounded text-cyan-400 font-mono"
                     >
                       {s}
                     </span>
@@ -177,13 +177,13 @@ export default function Resume() {
               {/* Category 2 */}
               <div className="space-y-2.5">
                 <h4 className="text-[9px] font-mono tracking-widest uppercase text-cyan-500">
-                  // PRODUCT_AND_OPERATIONS
+                  Operations
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {["Product Delivery", "Roadmap Planning", "Jira Stories", "Standups", "Agile Execution", "Process Mapping", "GL Reconciliation"].map((s) => (
                     <span
                       key={s}
-                      className="bg-cyan-950/10 border border-cyan-500/20 text-[10px] px-2 py-1 rounded text-cyan-400 font-mono"
+                      className="bg-cyan-950/10 border border-cyan-500/20 text-[10px] px-2.5 py-1 rounded text-cyan-400 font-mono"
                     >
                       {s}
                     </span>
@@ -194,13 +194,13 @@ export default function Resume() {
               {/* Category 3 */}
               <div className="space-y-2.5">
                 <h4 className="text-[9px] font-mono tracking-widest uppercase text-cyan-500">
-                  // CORE_SYSTEMS_AND_TOOLS
+                  Technology
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {["SQL (T-SQL/Postgres)", "Python", "Power BI", "RAG Systems", "LlamaIndex", "Grafana", "API Integrations", "Webhooks", "Git"].map((s) => (
                     <span
                       key={s}
-                      className="bg-cyan-950/10 border border-cyan-500/20 text-[10px] px-2 py-1 rounded text-cyan-400 font-mono"
+                      className="bg-cyan-950/10 border border-cyan-500/20 text-[10px] px-2.5 py-1 rounded text-cyan-400 font-mono"
                     >
                       {s}
                     </span>
@@ -212,24 +212,24 @@ export default function Resume() {
 
           {/* Credentials */}
           <section className="space-y-6">
-            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-500 flex items-center gap-2 border-b border-cyan-950 pb-2.5">
+            <h3 className="text-xs font-mono tracking-widest uppercase text-slate-555 flex items-center gap-2 border-b border-slate-900 pb-2.5">
               <Award className="w-4 h-4 text-cyan-400" />
-              04 // CERT_INDEX
+              Credentials
             </h3>
             
             <div className="space-y-4">
               <div className="stark-panel rounded-lg p-4">
                 <p className="text-xs font-mono font-bold text-white tracking-wider">
-                  CFA LEVEL 1 PASSED
+                  CFA Level 1 Passed
                 </p>
-                <p className="text-[9px] font-mono text-slate-500 mt-1">[CFA Institute] // [L2 Candidate]</p>
+                <p className="text-[9px] font-mono text-slate-500 mt-1">CFA Institute (L2 Candidate)</p>
               </div>
 
               <div className="stark-panel rounded-lg p-4">
                 <p className="text-xs font-mono font-bold text-white tracking-wider">
-                  DATA SCIENCE HONORS
+                  Data Science Honors
                 </p>
-                <p className="text-[9px] font-mono text-slate-500 mt-1">[WorldQuant University]</p>
+                <p className="text-[9px] font-mono text-slate-500 mt-1">WorldQuant University</p>
               </div>
             </div>
           </section>
