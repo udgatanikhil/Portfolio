@@ -40,7 +40,7 @@ export default function Home() {
             <span>Bengaluru, India (BLR)</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-800 leading-[1.08] font-serif">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-805 leading-[1.08] font-serif">
             Delivering complex FinTech products and AI architectures.
           </h1>
           
@@ -172,18 +172,6 @@ export default function Home() {
             <p className="text-xs text-slate-500 leading-relaxed font-light">
               Machine learning customer default risk scoring, healthcare CRM feature automation, fits gap analyses, and compliance parameters.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Delivery Philosophy */}
-      <section className="editorial-card rounded-xl p-8 md:p-12 relative overflow-hidden bg-white">
-        <div className="space-y-4 max-w-2xl relative z-10">
-          <blockquote className="text-slate-700 text-sm md:text-lg font-light italic leading-relaxed border-l border-earth-green/45 pl-6 font-serif">
-            &ldquo;I believe technical project management is about translating complex accounting frameworks and risk metrics into clean API contracts, automated integration templates, and reliable release schedules.&rdquo;
-          </blockquote>
-          <div className="text-[10px] text-slate-500 font-mono pl-6 mt-2">
-            &mdash; Nikhil Udgata, Technical PM
           </div>
         </div>
       </section>
