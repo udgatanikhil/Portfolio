@@ -96,14 +96,9 @@ export default function CaseStudies() {
     <div className="space-y-16 py-8 md:py-16 animate-fade-up">
       {/* Intro Header */}
       <section className="space-y-4 max-w-3xl">
-        <div className="space-y-1">
-          <h1 className="text-[10px] font-mono tracking-widest uppercase text-earth-green">
-            Case Studies
-          </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-805 font-serif">
-            Technical Project Management
-          </h2>
-        </div>
+        <h2 className="text-3xl font-bold tracking-tight text-slate-805 font-serif">
+          Technical Project Case Studies
+        </h2>
         <p className="text-sm text-slate-550 leading-relaxed font-light">
           The following case studies outline real-world engineering projects I have managed. 
           Each case represents a complete lifecycle from initial problem identification and stakeholder 
@@ -253,7 +248,7 @@ export default function CaseStudies() {
                       {project.kpis.map((kpi, kpiIdx) => (
                         <div
                           key={kpiIdx}
-                          className="stark-panel rounded-lg p-5 flex flex-col justify-center items-center text-center bg-white"
+                          className="editorial-card rounded-lg p-5 flex flex-col justify-center items-center text-center bg-white"
                         >
                           <span className="text-3xl font-extrabold text-earth-green tracking-tight font-mono">
                             {kpi.value}

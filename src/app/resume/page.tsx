@@ -6,10 +6,7 @@ export default function Resume() {
       {/* Page Header with Action Button */}
       <section className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#ebdcb9]/60 pb-6">
         <div className="space-y-1">
-          <h1 className="text-xs font-mono tracking-widest uppercase text-earth-green">
-            Resume
-          </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-serif">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-805 font-serif">
             Nikhil Udgata
           </h2>
         </div>
@@ -41,7 +38,7 @@ export default function Resume() {
                   <h4 className="font-bold text-slate-800 text-base tracking-wide font-serif">
                     Technical Project Manager
                   </h4>
-                  <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
+                  <span className="text-[10px] font-mono text-slate-550 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-earth-blue" />
                     Nov 2025 &ndash; Present
                   </span>
@@ -66,7 +63,7 @@ export default function Resume() {
                   <h4 className="font-bold text-slate-800 text-base tracking-wide font-serif">
                     Senior Business Analyst
                   </h4>
-                  <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
+                  <span className="text-[10px] font-mono text-slate-550 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-earth-blue" />
                     Nov 2024 &ndash; Oct 2025
                   </span>
@@ -91,7 +88,7 @@ export default function Resume() {
                   <h4 className="font-bold text-slate-800 text-base tracking-wide font-serif">
                     Business Analyst & Associate BA
                   </h4>
-                  <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
+                  <span className="text-[10px] font-mono text-slate-555 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-earth-blue" />
                     May 2020 &ndash; Oct 2024
                   </span>
@@ -139,7 +136,7 @@ export default function Resume() {
                   </h4>
                   <span className="text-xs font-mono text-slate-500">2015 &ndash; 2018</span>
                 </div>
-                <p className="text-xs text-slate-500 font-mono uppercase tracking-wider">
+                <p className="text-xs text-slate-505 font-mono uppercase tracking-wider">
                   SVKM&rsquo;s NMIMS // Mumbai, India
                 </p>
               </div>
@@ -218,14 +215,14 @@ export default function Resume() {
             </h3>
             
             <div className="space-y-4">
-              <div className="stark-panel rounded-lg p-4 bg-white shadow-sm">
+              <div className="editorial-card rounded-lg p-4 bg-white shadow-sm">
                 <p className="text-xs font-mono font-bold text-slate-800 tracking-wider">
                   CFA Level 1 Passed
                 </p>
                 <p className="text-[9px] font-mono text-slate-500 mt-1">CFA Institute (L2 Candidate)</p>
               </div>
 
-              <div className="stark-panel rounded-lg p-4 bg-white shadow-sm">
+              <div className="editorial-card rounded-lg p-4 bg-white shadow-sm">
                 <p className="text-xs font-mono font-bold text-slate-800 tracking-wider">
                   Data Science Honors
                 </p>

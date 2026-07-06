@@ -79,14 +79,9 @@ export default function Contact() {
     <div className="space-y-12 max-w-4xl mx-auto py-8 md:py-16 animate-fade-up">
       {/* Page Header */}
       <section className="border-b border-[#ebdcb9]/60 pb-6">
-        <div className="space-y-1">
-          <h1 className="text-xs font-mono tracking-widest uppercase text-earth-green">
-            Contact
-          </h1>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-800 font-serif">
-            Get in Touch
-          </h2>
-        </div>
+        <h2 className="text-3xl font-bold tracking-tight text-slate-805 font-serif">
+          Get in Touch
+        </h2>
         <p className="text-sm text-slate-550 mt-2 font-light leading-relaxed">
           Please fill out the form below or reach out directly to coordinate lending integration, custom RAG setups, or operational timelines.
         </p>
@@ -95,7 +90,7 @@ export default function Contact() {
       {/* Main Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Contact Form */}
-        <section className="md:col-span-7 stark-panel rounded-xl p-6 relative overflow-hidden bg-white">
+        <section className="md:col-span-7 editorial-card rounded-xl p-6 relative overflow-hidden bg-white">
           <h3 className="text-sm font-bold text-slate-805 mb-5 font-mono">
             Send Message
           </h3>
@@ -126,8 +121,8 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label htmlFor="name" className="text-[9px] tracking-wider uppercase text-slate-500 block">
-                    Full Name <span className="text-rose-500">*</span>
+                  <label htmlFor="name" className="text-[9px] tracking-wider uppercase text-slate-505 block">
+                    Full Name <span className="text-rose-505">*</span>
                   </label>
                   <input
                     type="text"
@@ -141,8 +136,8 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="email" className="text-[9px] tracking-wider uppercase text-slate-500 block">
-                    Email Address <span className="text-rose-500">*</span>
+                  <label htmlFor="email" className="text-[9px] tracking-wider uppercase text-slate-505 block">
+                    Email Address <span className="text-rose-505">*</span>
                   </label>
                   <input
                     type="email"
@@ -157,7 +152,7 @@ export default function Contact() {
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="subject" className="text-[9px] tracking-wider uppercase text-slate-500 block">
+                <label htmlFor="subject" className="text-[9px] tracking-wider uppercase text-slate-505 block">
                   Subject
                 </label>
                 <input
@@ -172,8 +167,8 @@ export default function Contact() {
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="message" className="text-[9px] tracking-wider uppercase text-slate-500 block">
-                  Message <span className="text-rose-500">*</span>
+                <label htmlFor="message" className="text-[9px] tracking-wider uppercase text-slate-505 block">
+                  Message <span className="text-rose-505">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -206,13 +201,12 @@ export default function Contact() {
 
         {/* Direct Coordinates */}
         <section className="md:col-span-5 space-y-6">
-          <div className="stark-panel rounded-xl p-6 space-y-6 bg-white shadow-sm">
+          <div className="editorial-card rounded-xl p-6 space-y-6 bg-white shadow-sm">
             <h3 className="text-sm font-bold text-slate-805 mb-2 border-b border-[#ebdcb9]/60 pb-2 font-serif">
               Coordinates
             </h3>
 
             <div className="space-y-5 font-mono text-xs">
-              {/* Coordinate 1 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <Mail className="w-4 h-4" />
@@ -228,13 +222,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Coordinate 2 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <LinkedinIcon className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">LinkedIn</h4>
+                  <h4 className="text-[9px] text-slate-505 uppercase tracking-wider">LinkedIn</h4>
                   <a
                     href="https://linkedin.com/in/nikhiludgata"
                     target="_blank"
@@ -246,13 +239,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Coordinate 3 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <GithubIcon className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">GitHub</h4>
+                  <h4 className="text-[9px] text-slate-505 uppercase tracking-wider">GitHub</h4>
                   <a
                     href="https://github.com/udgatanikhil"
                     target="_blank"
@@ -264,13 +256,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Coordinate 4 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-green/10 border border-earth-green/20 flex items-center justify-center text-earth-green">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-[9px] text-slate-500 uppercase tracking-wider">Location</h4>
+                  <h4 className="text-[9px] text-slate-505 uppercase tracking-wider">Location</h4>
                   <p className="text-slate-800 font-semibold font-sans text-sm">
                     Bengaluru (BLR), Karnataka, India
                   </p>

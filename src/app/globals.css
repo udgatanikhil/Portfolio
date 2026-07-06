@@ -75,14 +75,14 @@ body {
 }
 
 /* Minimalist elegant cards */
-.stark-panel {
+.editorial-card {
   background-color: var(--card-bg);
   border: 1px solid rgba(234, 222, 202, 0.7);
   box-shadow: 0 4px 20px -10px rgba(58, 79, 65, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.stark-panel:hover {
+.editorial-card:hover {
   border-color: var(--accent-green);
   box-shadow: 0 10px 25px -10px rgba(58, 79, 65, 0.08);
   transform: translateY(-2px);
