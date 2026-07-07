@@ -75,10 +75,12 @@ export default function Resume() {
                   </span>
                 </div>
                 <ul className="list-disc pl-5 text-xs text-slate-600 space-y-1.5 pt-1.5 leading-relaxed font-light">
-                  <li>Managed requirements scoping and customer lifecycles for HIPAA-compliant healthcare CRM product deployments.</li>
-                  <li>Delivered two major automated CRM workflow features that reduced customer onboarding cycle times by 30% and improved client retention by 18%.</li>
-                  <li>Spearheaded integration of RAG-based search engines within the CRM to automate document querying, improving CSAT scores by 15%.</li>
-                  <li>Tracked feature engagement metrics and cohort drop-off paths to drive data-backed improvements.</li>
+                  <li><strong>Complex Multi-Entity Architecture:</strong> Lead end-to-end implementations for large-scale customers, focusing on consolidated reporting, intercompany complexities, and high-volume entity management.</li>
+                  <li><strong>Technical Advocacy &amp; Gap Resolution:</strong> Identify technical platform gaps for enterprise-level customers and work directly with Engineering teams to develop and implement resolutions.</li>
+                  <li><strong>End-to-End Onboarding Management:</strong> Orchestrate all attached product onboardings and lead comprehensive employee education sessions to ensure high adoption and value realization.</li>
+                  <li><strong>Strategic Service Evolution:</strong> Partner closely with Senior Leaders in Service Delivery and Strategy to identify areas of customer friction to supply documented recommendations on product improvements and service workflows.</li>
+                  <li><strong>On-the-Ground Consultation:</strong> Provide high-touch, &ldquo;white-glove&rdquo; assistance directly within customer business offices when necessary to drive successful outcomes.</li>
+                  <li>Managed requirements scoping and customer lifecycles for HIPAA-compliant healthcare CRM product deployments, and spearheaded a RAG-based document search integration that improved CSAT scores by 15%.</li>
                 </ul>
               </div>
 

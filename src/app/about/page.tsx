@@ -124,7 +124,7 @@ export default function About() {
               LeadSquared (LSQ) // Bengaluru (BLR), India
             </p>
             <p className="text-xs text-slate-550 leading-relaxed font-light font-sans">
-              Oversaw HIPAA-compliant healthcare CRM deployments, gather user requirements, and draft PRDs. Spearheaded a RAG-based AI search model to index unstructured customer documentation, cutting patient onboarding cycles by 30%.
+              Oversaw HIPAA-compliant CRM deployments and led end-to-end multi-entity implementations for enterprise customers. Resolved technical platform gaps directly with Engineering, managed onboarding/employee training, and delivered strategic workflow recommendations to senior leadership.
             </p>
           </div>
 
