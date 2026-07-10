@@ -1,6 +1,155 @@
 import Image from "next/image";
 import { Award, MapPin } from "lucide-react";
 
+function DeliveryPipelineDiagram() {
+  const steps = [
+    { num: 1, title: "Sales Agreement & Handover" },
+    { num: 2, title: "Requirements Discovery & Scoping", highlight: true },
+    { num: 3, title: "PRD & User Story Spec Drafting", highlight: true },
+    { num: 4, title: "Integration Specs & Tech Design", highlight: true },
+    { num: 5, title: "Sprint Backlog & Resource Allocation", highlight: true },
+    { num: 6, title: "Engineering Development Cycles", highlight: true },
+    { num: 7, title: "Code Reviews & QA Testing", highlight: true },
+    { num: 8, title: "User Acceptance Testing (UAT)", highlight: true },
+    { num: 9, title: "Production Deployment & Release", highlight: true },
+    { num: 10, title: "Client Enablement & Training", highlight: true },
+  ];
+
+  return (
+    <div className="editorial-card rounded-xl p-6 md:p-10 bg-white">
+      <div className="max-w-2xl mx-auto space-y-8">
+        <div className="space-y-1 text-center">
+          <h3 className="text-2xl font-bold text-slate-805 tracking-tight font-serif">
+            Product Delivery Lifecycle
+          </h3>
+          <p className="text-xs text-slate-500 font-light font-sans max-w-md mx-auto">
+            An overview of the software delivery lifecycle, illustrating the stages I lead to coordinate engineering and project output.
+          </p>
+        </div>
+
+        <div className="relative flex justify-center">
+          <div className="w-full max-w-lg relative h-[500px]">
+            <svg
+              className="absolute inset-0 w-full h-full"
+              viewBox="0 0 540 500"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Vertical dotted connecting line */}
+              <line
+                x1="45"
+                y1="35"
+                x2="45"
+                y2="467"
+                stroke="#eadeca"
+                strokeWidth="1.5"
+                strokeDasharray="4 4"
+              />
+
+              {/* Steps Rendering */}
+              {steps.map((step, idx) => {
+                const y = 35 + idx * 48;
+                return (
+                  <g key={step.num}>
+                    <circle
+                      cx="45"
+                      cy={y}
+                      r={step.highlight ? "5" : "3.5"}
+                      fill={step.highlight ? "#3a4f41" : "#ffffff"}
+                      stroke="#3a4f41"
+                      strokeWidth="1.5"
+                    />
+                    
+                    <text
+                      x="70"
+                      y={y + 3.5}
+                      fill={step.highlight ? "#3a4f41" : "#888888"}
+                      className="font-mono text-[9px] font-bold"
+                    >
+                      {String(step.num).padStart(2, "0")}
+                    </text>
+
+                    <text
+                      x="95"
+                      y={y + 4}
+                      fill={step.highlight ? "#2d312c" : "#777777"}
+                      className={`text-[11px] font-sans ${step.highlight ? "font-semibold" : "font-light"}`}
+                    >
+                      {step.title}
+                    </text>
+                  </g>
+                );
+              })}
+
+              {/* Curly Bracket (spanning steps 2 to 10, y = 83 to y = 467) */}
+              <path
+                d="M 285,70 Q 305,70 305,90 L 305,250 Q 305,275 325,275 Q 305,275 305,300 L 305,460 Q 305,480 285,480"
+                stroke="#3a4f41"
+                strokeWidth="1.5"
+                fill="none"
+              />
+
+              {/* Sketchy Annotation Arrow pointing to bracket tip (325, 275) */}
+              <path
+                d="M 405,220 Q 365,230 335,272"
+                stroke="#7ca2b4"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <path
+                d="M 405,220 Q 364,231 334,273"
+                stroke="#7ca2b4"
+                strokeWidth="0.8"
+                strokeLinecap="round"
+                fill="none"
+              />
+              {/* Arrow Head */}
+              <path
+                d="M 345,262 L 333,273 L 343,280"
+                stroke="#7ca2b4"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+              />
+
+              {/* Cursive Annotation */}
+              <text
+                x="410"
+                y="190"
+                fill="#3a4f41"
+                transform="rotate(-4, 410, 190)"
+                className="font-caveat font-bold text-lg md:text-xl tracking-wide"
+              >
+                This is where
+              </text>
+              <text
+                x="410"
+                y="207"
+                fill="#3a4f41"
+                transform="rotate(-4, 410, 207)"
+                className="font-caveat font-bold text-lg md:text-xl tracking-wide"
+              >
+                I come in!
+              </text>
+              <text
+                x="410"
+                y="223"
+                fill="#7ca2b4"
+                transform="rotate(-4, 410, 223)"
+                className="font-caveat font-medium text-xs tracking-wider"
+              >
+                (Post-Sales to KAM Handover)
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function About() {
   return (
     <div className="space-y-16 max-w-4xl mx-auto py-8 md:py-16 animate-fade-up">
@@ -79,6 +228,11 @@ export default function About() {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* Product Delivery Lifecycle Diagram */}
+      <section className="animate-fade-up">
+        <DeliveryPipelineDiagram />
       </section>
 
       {/* Career Journey */}
