@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans, Caveat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -11,6 +11,11 @@ const playfair = Playfair_Display({
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
+  subsets: ["latin"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
 });
 
@@ -46,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${jakarta.variable} h-full antialiased light`}
+      className={`${playfair.variable} ${jakarta.variable} ${caveat.variable} h-full antialiased light`}
     >
       <body className="min-h-full flex flex-col bg-background text-[#2d312c] relative overflow-x-hidden font-sans">
         {/* Soft Organic Aura (Mineral Blue & Sage Green blends) */}

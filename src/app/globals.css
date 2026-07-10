@@ -23,6 +23,7 @@
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-caveat: var(--font-caveat), cursive;
 }
 
 /* Force light mode background across system schemes */
