@@ -122,7 +122,7 @@ export default function Resume() {
               <div className="space-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <h4 className="font-bold text-slate-800 text-sm tracking-wide font-serif">
-                    MBA in Technology Management
+                    MBA in Finance
                   </h4>
                   <span className="text-xs font-mono text-slate-500">2018 &ndash; 2020</span>
                 </div>
