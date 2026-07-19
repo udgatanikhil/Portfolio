@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { caseStudies } from "@/data/case-studies";
-import { Layers, Zap, Clock, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { caseStudies, thoughtExercises } from "@/data/case-studies";
+import { Layers, Zap, Clock, ShieldCheck, ArrowRight, FileText } from "lucide-react";
 
 // Beautiful simplified SVG diagram creators representing real system architectures
 function LendingJourneyDiagram() {
@@ -97,13 +98,74 @@ export default function CaseStudies() {
       {/* Intro Header */}
       <section className="space-y-4 max-w-3xl">
         <h2 className="text-3xl font-bold tracking-tight text-slate-805 font-serif">
-          Technical Project Case Studies
+          Case Studies &amp; Strategy Frameworks
         </h2>
         <p className="text-sm text-slate-550 leading-relaxed font-light">
-          The following case studies outline real-world engineering projects I have managed. 
-          Each case represents a complete lifecycle from initial problem identification and stakeholder 
+          Explore real-world engineering case studies and detailed strategy thought exercises. 
+          Each project represents a complete lifecycle from initial problem identification and stakeholder 
           alignment, through technical architecture selection, agile execution, risk management, and outcome validation.
         </p>
+      </section>
+
+      {/* Thought Exercises Section */}
+      <section className="space-y-6">
+        <div className="border-b border-[#ebdcb9]/60 pb-3">
+          <h3 className="text-xl font-bold text-slate-805 tracking-tight font-serif flex items-center gap-2">
+            <FileText className="w-5 h-5 text-earth-green" />
+            Strategy Thought Exercises &amp; PMO Plans
+          </h3>
+        </div>
+
+        {thoughtExercises.map((exercise) => (
+          <div
+            key={exercise.slug}
+            className="editorial-card rounded-2xl p-6 md:p-8 bg-white space-y-6 border border-[#ebdcb9]/80 shadow-sm"
+          >
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#ebdcb9]/40 pb-4">
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-earth-green bg-earth-green/10 px-2.5 py-0.5 rounded border border-earth-green/20 font-semibold">
+                  {exercise.category}
+                </span>
+                <h4 className="text-2xl font-bold text-slate-800 font-serif">
+                  {exercise.title}
+                </h4>
+              </div>
+              <Link
+                href={exercise.link}
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-xs font-mono tracking-wider bg-earth-green hover:bg-earth-green/90 text-white transition-all duration-300 shadow-sm hover:scale-[1.01] self-start sm:self-auto"
+              >
+                View Strategy Plan
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <p className="text-xs text-slate-600 leading-relaxed font-light">
+              {exercise.summary}
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-xl bg-[#fbf9f5] border border-[#ebdcb9]/50 font-mono text-xs">
+              {exercise.kpis.map((kpi, kIdx) => (
+                <div key={kIdx} className="space-y-0.5">
+                  <span className="text-[9px] text-slate-400 uppercase tracking-wider block">
+                    {kpi.metric}
+                  </span>
+                  <span className="font-bold text-earth-green text-sm block">
+                    {kpi.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <ul className="space-y-2 pl-1">
+              {exercise.highlights.map((item, hIdx) => (
+                <li key={hIdx} className="flex gap-2.5 text-xs text-slate-600 font-light">
+                  <span className="text-earth-green font-bold font-mono text-xs">&bull;</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
       {/* Case Studies List */}

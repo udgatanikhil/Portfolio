@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ChevronRight, MapPin } from "lucide-react";
-import { caseStudies } from "@/data/case-studies";
+import { ArrowRight, ChevronRight, MapPin, FileText } from "lucide-react";
+import { caseStudies, thoughtExercises } from "@/data/case-studies";
 
 function HeroPortrait() {
   return (
@@ -28,6 +28,7 @@ function HeroPortrait() {
 
 export default function Home() {
   const featuredCases = caseStudies.slice(0, 3);
+  const featuredExercise = thoughtExercises[0];
 
   return (
     <div className="space-y-28 py-8 md:py-16 animate-fade-up">
@@ -53,7 +54,7 @@ export default function Home() {
               href="/case-studies"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium bg-earth-green hover:bg-earth-green/90 text-white transition-all duration-300 shadow-sm shadow-[#3a4f41]/10 hover:scale-[1.01]"
             >
-              Explore Case Studies
+              Explore Case Studies &amp; Plans
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link
@@ -69,6 +70,58 @@ export default function Home() {
           <HeroPortrait />
         </div>
       </section>
+
+      {/* Featured Thought Exercise Banner */}
+      {featuredExercise && (
+        <section className="space-y-4">
+          <div className="flex items-center justify-between border-b border-[#ebdcb9]/60 pb-3">
+            <h3 className="text-2xl font-bold text-slate-805 tracking-tight font-serif flex items-center gap-2">
+              <FileText className="w-5 h-5 text-earth-green" />
+              Featured Strategy Thought Exercise
+            </h3>
+            <span className="text-xs font-mono text-earth-green">
+              Strategy &amp; PMO Framework
+            </span>
+          </div>
+
+          <div className="editorial-card rounded-2xl p-6 sm:p-8 bg-white border border-[#ebdcb9]/80 shadow-sm space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-earth-green bg-earth-green/10 px-2.5 py-0.5 rounded border border-earth-green/20 font-semibold">
+                  {featuredExercise.category}
+                </span>
+                <h4 className="text-xl sm:text-2xl font-bold text-slate-800 font-serif">
+                  {featuredExercise.title}
+                </h4>
+              </div>
+              <Link
+                href={featuredExercise.link}
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-xs font-mono tracking-wider bg-earth-green hover:bg-earth-green/90 text-white transition-all duration-300 shadow-sm hover:scale-[1.01] self-start sm:self-auto"
+              >
+                Read Strategy Document
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <p className="text-xs text-slate-600 leading-relaxed font-light">
+              {featuredExercise.summary}
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-xl bg-[#fbf9f5] border border-[#ebdcb9]/50 font-mono text-xs">
+              {featuredExercise.kpis.map((kpi, kIdx) => (
+                <div key={kIdx} className="space-y-0.5">
+                  <span className="text-[9px] text-slate-400 uppercase tracking-wider block">
+                    {kpi.metric}
+                  </span>
+                  <span className="font-bold text-earth-green text-sm block">
+                    {kpi.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Selected Case Studies */}
       <section className="space-y-10">

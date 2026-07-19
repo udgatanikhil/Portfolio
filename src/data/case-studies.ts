@@ -13,6 +13,42 @@ export interface CaseStudy {
   role: string;
 }
 
+export interface ThoughtExercise {
+  slug: string;
+  title: string;
+  category: string;
+  summary: string;
+  link: string;
+  highlights: string[];
+  kpis: { metric: string; value: string }[];
+  scope: string;
+  role: string;
+}
+
+export const thoughtExercises: ThoughtExercise[] = [
+  {
+    slug: "healthcare-ai-transformation",
+    title: "Healthcare Support AI Transformation Strategy",
+    category: "Thought Exercise — PMO & AI Delivery",
+    summary: "An end-to-end operational strategy and PMO delivery model for introducing AI copilots into a 250-agent healthcare support center, driving ~25,000 monthly handling hours removed while maintaining a human on every interaction.",
+    link: "/thought-exercise/healthcare-ai-transformation",
+    highlights: [
+      "Core Metric: Driven strictly by human handling time removed (~25,000 monthly hours).",
+      "Human-in-the-Loop Constraint: AI handles backend lookups and note-drafting while agents retain patient interaction.",
+      "Data-Derived Workforce Models: 3 calibrated capacity scenarios (222 FTE / 200 FTE / 148 FTE).",
+      "Full PMO Governance: 90-day delivery roadmap, 15-workstream RAID log, RACI matrix, and safety controls."
+    ],
+    kpis: [
+      { metric: "Target Handling Hours Removed", value: "~25,000/mo" },
+      { metric: "FTE Capacity Options", value: "148–222 FTE" },
+      { metric: "Human-in-the-Loop Safeguard", value: "100%" },
+      { metric: "Delivery Roadmap Scope", value: "90 Days" }
+    ],
+    scope: "250-Agent Support Operation",
+    role: "PMO Lead & AI Strategy Architect"
+  }
+];
+
 export const caseStudies: CaseStudy[] = [
   {
     slug: "lending-funnel-optimization",
