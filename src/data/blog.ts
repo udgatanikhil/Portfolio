@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "building-vault-multi-role-project-cockpit",
+    title: "Building Vault: Designing an Enterprise Multi-Role Delivery Cockpit with Real-Time SSE & Jira Sync",
+    excerpt: "A deep dive into Vault: how we bridged client intake, TPM capacity scheduling, AE standups, and executive analytics into a real-time system with Redis Pub/Sub, Node.js, and Jira Cloud integration.",
+    date: "July 20, 2026",
+    readTime: "12 min read",
+    category: "Architecture & AI Ops",
+    author: "Nikhil Udgata"
+  },
+  {
     slug: "pm-guide-to-rag",
     title: "A Project Manager's Guide to Retrieval-Augmented Generation (RAG)",
     excerpt: "Demystifying RAG pipelines for PMs: balancing accuracy, cost, latency, and compliance in enterprise generative AI products.",
