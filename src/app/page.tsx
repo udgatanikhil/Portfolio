@@ -123,6 +123,83 @@ export default function Home() {
         </section>
       )}
 
+      {/* Product Delivery Lifecycle */}
+      <section className="space-y-8">
+        <div className="border-b border-[#ebdcb9]/60 pb-3 space-y-1">
+          <span className="text-xs font-mono uppercase tracking-widest text-earth-green font-semibold">
+            Operational Methodology
+          </span>
+          <h3 className="text-2xl font-bold text-slate-805 tracking-tight font-serif">
+            Product Delivery Lifecycle
+          </h3>
+          <p className="text-xs text-slate-550 leading-relaxed font-light max-w-2xl">
+            An overview of the software delivery lifecycle, illustrating the stages I lead to coordinate engineering and project output.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div className="editorial-card rounded-xl p-5 bg-white border border-[#ebdcb9]/80 space-y-3 relative">
+            <span className="text-[10px] font-mono text-earth-green font-bold uppercase tracking-wider bg-earth-green/10 px-2 py-0.5 rounded">
+              Phase 01
+            </span>
+            <h4 className="text-sm font-bold text-slate-800 font-serif">
+              Discovery &amp; Intake
+            </h4>
+            <p className="text-[11px] text-slate-600 leading-relaxed font-light">
+              Client requirement gathering, RICE model scoring ($Reach \times Impact \times Confidence \div Effort$), scope definition, and business alignment.
+            </p>
+          </div>
+
+          <div className="editorial-card rounded-xl p-5 bg-white border border-[#ebdcb9]/80 space-y-3 relative">
+            <span className="text-[10px] font-mono text-earth-green font-bold uppercase tracking-wider bg-earth-green/10 px-2 py-0.5 rounded">
+              Phase 02
+            </span>
+            <h4 className="text-sm font-bold text-slate-800 font-serif">
+              Capacity Planning
+            </h4>
+            <p className="text-[11px] text-slate-600 leading-relaxed font-light">
+              Work breakdown structures (WBS), velocity estimation, drag-and-drop calendar allocations, and overload safety thresholds (&gt;8h/day).
+            </p>
+          </div>
+
+          <div className="editorial-card rounded-xl p-5 bg-white border border-[#ebdcb9]/80 space-y-3 relative">
+            <span className="text-[10px] font-mono text-earth-green font-bold uppercase tracking-wider bg-earth-green/10 px-2 py-0.5 rounded">
+              Phase 03
+            </span>
+            <h4 className="text-sm font-bold text-slate-800 font-serif">
+              Agile Execution
+            </h4>
+            <p className="text-[11px] text-slate-600 leading-relaxed font-light">
+              Sprint orchestration, daily EOD standup compliance, Jira ticket tracking, and bi-directional webhook comment syncing.
+            </p>
+          </div>
+
+          <div className="editorial-card rounded-xl p-5 bg-white border border-[#ebdcb9]/80 space-y-3 relative">
+            <span className="text-[10px] font-mono text-earth-green font-bold uppercase tracking-wider bg-earth-green/10 px-2 py-0.5 rounded">
+              Phase 04
+            </span>
+            <h4 className="text-sm font-bold text-slate-800 font-serif">
+              Risk &amp; Governance
+            </h4>
+            <p className="text-[11px] text-slate-600 leading-relaxed font-light">
+              RAID log tracking, RAG status overrides, dependency management, HIPAA/compliance checks, and UAT sign-offs.
+            </p>
+          </div>
+
+          <div className="editorial-card rounded-xl p-5 bg-white border border-[#ebdcb9]/80 space-y-3 relative">
+            <span className="text-[10px] font-mono text-earth-green font-bold uppercase tracking-wider bg-earth-green/10 px-2 py-0.5 rounded">
+              Phase 05
+            </span>
+            <h4 className="text-sm font-bold text-slate-800 font-serif">
+              Release &amp; AI Ops
+            </h4>
+            <p className="text-[11px] text-slate-600 leading-relaxed font-light">
+              Zero-downtime deployments, real-time SSE event broadcasting, Grafana analytics, and Redis-cached AI summaries.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Selected Case Studies */}
       <section className="space-y-10">
         <div className="flex items-end justify-between border-b border-[#ebdcb9]/60 pb-3">
