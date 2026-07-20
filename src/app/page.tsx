@@ -141,8 +141,8 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {featuredCases.map((project, idx) => {
             let imageUrl = "/crm_ml_project.jpg";
-            if (idx === 0) imageUrl = "/lending_project.jpg";
-            if (idx === 1) imageUrl = "/rag_project.jpg";
+            if (project.slug === "vault-project-delivery-cockpit") imageUrl = "/lending_project.jpg";
+            else if (idx === 1) imageUrl = "/rag_project.jpg";
             
             return (
               <div

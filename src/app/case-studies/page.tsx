@@ -1,9 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import { caseStudies, thoughtExercises } from "@/data/case-studies";
-import { Layers, Zap, Clock, ShieldCheck, ArrowRight, FileText } from "lucide-react";
+import { Layers, Zap, Clock, ShieldCheck, ArrowRight, FileText, ExternalLink } from "lucide-react";
 
 // Beautiful simplified SVG diagram creators representing real system architectures
+function VaultDiagram() {
+  return (
+    <svg className="w-full h-20 bg-[#fbf9f5] rounded border border-[#ebdcb9]/60 p-2 font-mono text-[8px] text-earth-green" viewBox="0 0 160 50">
+      <rect x="5" y="15" width="25" height="20" fill="none" stroke="rgba(58,79,65,0.4)" strokeWidth="0.8" rx="2" />
+      <text x="8" y="27" fill="currentColor">Client</text>
+      
+      <line x1="30" y1="25" x2="48" y2="25" stroke="rgba(58,79,65,0.3)" strokeWidth="0.8" />
+      
+      <rect x="48" y="15" width="25" height="20" fill="none" stroke="rgba(58,79,65,0.4)" strokeWidth="0.8" rx="2" />
+      <text x="52" y="27" fill="currentColor">TPM</text>
+
+      <line x1="73" y1="25" x2="91" y2="25" stroke="rgba(58,79,65,0.3)" strokeWidth="0.8" />
+
+      <rect x="91" y="15" width="22" height="20" fill="none" stroke="rgba(58,79,65,0.4)" strokeWidth="0.8" rx="2" />
+      <text x="94" y="27" fill="currentColor">AE</text>
+
+      <line x1="113" y1="25" x2="131" y2="25" stroke="rgba(58,79,65,0.3)" strokeWidth="0.8" />
+
+      <rect x="131" y="15" width="25" height="20" fill="none" stroke="rgba(58,79,65,0.4)" strokeWidth="0.8" rx="2" />
+      <text x="133" y="27" fill="currentColor">Admin</text>
+      
+      <text x="5" y="8" fill="rgba(58,79,65,0.4)">[Redis SSE 4-Role Loop]</text>
+    </svg>
+  );
+}
+
 function LendingJourneyDiagram() {
   return (
     <svg className="w-full h-20 bg-[#fbf9f5] rounded border border-[#ebdcb9]/60 p-2 font-mono text-[8px] text-earth-green" viewBox="0 0 160 50">
@@ -194,13 +220,26 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Header Info */}
-                <div className="space-y-2">
-                  <span className="text-xs font-mono uppercase tracking-wider text-earth-green bg-[#f0e6d2]/30 px-2.5 py-0.5 rounded border border-[#ebdcb9] inline-block font-semibold">
-                    Case Study #{idx + 1} &mdash; {project.category}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-805 tracking-tight font-serif">
-                    {project.title}
-                  </h3>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="space-y-2">
+                    <span className="text-xs font-mono uppercase tracking-wider text-earth-green bg-[#f0e6d2]/30 px-2.5 py-0.5 rounded border border-[#ebdcb9] inline-block font-semibold">
+                      Case Study #{idx + 1} &mdash; {project.category}
+                    </span>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-slate-805 tracking-tight font-serif">
+                      {project.title}
+                    </h3>
+                  </div>
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs font-mono tracking-wider bg-earth-green hover:bg-earth-green/90 text-white transition-all duration-300 shadow-sm hover:scale-[1.01] self-start sm:self-auto flex-shrink-0"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 mr-2" />
+                      Live App Demo
+                    </a>
+                  )}
                 </div>
 
                 {/* Meta Stats Panel */}
@@ -238,6 +277,7 @@ export default function CaseStudies() {
                   <h4 className="text-[10px] font-mono tracking-widest uppercase text-slate-400">
                     Schematic Architecture
                   </h4>
+                  {project.slug === "vault-project-delivery-cockpit" && <VaultDiagram />}
                   {project.slug === "lending-funnel-optimization" && <LendingJourneyDiagram />}
                   {project.slug === "rag-bi-release-automation" && <RagBiDiagram />}
                   {project.slug === "healthcare-crm-ai-knowledge" && <CrmDiagram />}

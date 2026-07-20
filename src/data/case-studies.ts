@@ -11,6 +11,7 @@ export interface CaseStudy {
   technologies: string[];
   timeline: string;
   role: string;
+  demoUrl?: string;
 }
 
 export interface ThoughtExercise {
@@ -50,6 +51,32 @@ export const thoughtExercises: ThoughtExercise[] = [
 ];
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: "vault-project-delivery-cockpit",
+    title: "Vault — Multi-Role Project Delivery Cockpit & AI Assistant",
+    category: "Project Delivery & AI Systems",
+    summary: "Architected and built Vault, an enterprise multi-role project delivery cockpit uniting RICE intake, TPM capacity scheduling, AE standup compliance, and Jira Cloud bi-directional syncing into a real-time workspace.",
+    demoUrl: "https://vault-1-m9jg.onrender.com",
+    problem: "Engineering delivery organizations suffer from fragmented tools: clients lack objective feature intake, TPMs manually calculate capacity in spreadsheets, engineers fill isolated standup forms, and leadership lacks real-time operational visibility.",
+    approach: "Designed a 4-role continuous delivery architecture (Client, TPM, AE, Admin) synchronized via a Redis Pub/Sub Server-Sent Events (SSE) event tunnel. Integrated bi-directional Jira Cloud webhooks (POST /api/jira/webhook) and a 4-hour Redis-cached Dify AI summarization engine following the lean-prompt pattern.",
+    architecture: [
+      "Frontend SPA: React + Vite + Tailwind CSS with custom SVG Gantt charting and SSE subscription hooks.",
+      "Event Gateway: Node.js & Express API with a Redis Pub/Sub SSE event tunnel for real-time browser state syncing.",
+      "Database Layer: PostgreSQL containerized database storing RICE intakes, allocations, and user roles.",
+      "Bi-Directional Sync: Jira Cloud REST API integration and automated webhook callback handlers.",
+      "AI Summarization: Dify orchestration stack (Llama 3 / Ollama) with 4-hour Redis TTL response caching."
+    ],
+    kpis: [
+      { metric: "Capacity Overload Detection", value: "Real-Time (>8h)" },
+      { metric: "Jira Comment Sync Latency", value: "< 1 sec" },
+      { metric: "AI Token Fee Reduction", value: "-90%" },
+      { metric: "Operational Visibility Score", value: "+100%" }
+    ],
+    outcome: "Built and deployed a full-stack containerized multi-role project management system. Replaced static spreadsheet planning with real-time capacity scheduling and auto-syncing Jira audit histories.",
+    technologies: ["React", "Vite", "Node.js", "Express", "PostgreSQL", "Redis Pub/Sub", "SSE", "Jira REST API", "Docker", "Tailwind CSS"],
+    timeline: "Completed & Deployed",
+    role: "System Architect & Lead Developer"
+  },
   {
     slug: "lending-funnel-optimization",
     title: "B2B Digital Lending Integration & Funnel Optimization",
