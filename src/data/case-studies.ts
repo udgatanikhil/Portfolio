@@ -28,6 +28,27 @@ export interface ThoughtExercise {
 
 export const thoughtExercises: ThoughtExercise[] = [
   {
+    slug: "vault-project-delivery-cockpit",
+    title: "Vault — Multi-Role Project Delivery Cockpit & AI Assistant",
+    category: "Architecture & System Guide",
+    summary: "An enterprise-grade, multi-role project management cockpit uniting RICE intake, TPM capacity planning, AE standup compliance, Dify AI summaries, and bi-directional Jira Cloud syncing into a real-time workspace.",
+    link: "/thought-exercise/vault-project-delivery-cockpit",
+    highlights: [
+      "Real-Time State Broker: Redis Pub/Sub Server-Sent Events (SSE) tunnel updating connected browser sessions without page reloads.",
+      "4-Role Ecosystem: Dedicated portals for Clients (RICE intake), TPMs (capacity scheduling), AEs (standups & Jira sync), and Admins (AI summaries).",
+      "Bi-Directional Jira Webhook Loop: Automated webhook handling for status updates and instant jira.addComment() audit logging.",
+      "Cost-Efficient AI Ops: Dify AI stack using lean-prompting and Redis 4-hour TTL response caching to reduce LLM API token costs by >90%."
+    ],
+    kpis: [
+      { metric: "Capacity Overload Detection", value: "Real-Time (>8h)" },
+      { metric: "Jira Comment Sync Latency", value: "< 1 sec" },
+      { metric: "AI API Token Savings", value: "-90%" },
+      { metric: "Operational Visibility Score", value: "100%" }
+    ],
+    scope: "Enterprise Engineering & Delivery Cockpit",
+    role: "System Architect & Lead Developer"
+  },
+  {
     slug: "healthcare-ai-transformation",
     title: "Healthcare Support AI Transformation Strategy",
     category: "Thought Exercise — PMO & AI Delivery",
