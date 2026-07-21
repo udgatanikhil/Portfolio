@@ -1,16 +1,14 @@
-# Building Vault: Designing an Enterprise Multi-Role Delivery Cockpit with Real-Time SSE & Jira Sync
+# Vault — Multi-Role Project Delivery Cockpit & AI Assistant
 
-*Published on July 20, 2026 • 12 min read • Category: Architecture & AI Ops • By Nikhil Udgata*
+*Published on July 21, 2026 • 12 min read • Category: Architecture & AI Ops • By Nikhil Udgata*
 
-Modern software engineering teams often suffer from **fragmented operational tools**. Clients request features through ad-hoc emails; Technical Program Managers (TPMs) calculate team capacity in static spreadsheets; Account Engineers (AEs) fill out daily standups in isolated documents; and executive leadership struggles to get a reliable, real-time picture of project health.
-
-To solve this friction, I architected and built **Vault** — an enterprise-grade, multi-role project delivery cockpit. Vault bridges the gap between client visibility, engineering execution, and program management by uniting structured intake, capacity allocation, real-time Server-Sent Events (SSE), and bi-directional **Jira Cloud** synchronization into a single workspace.
+Vault is an enterprise-grade, multi-role project management cockpit designed for modern engineering teams. It bridges the gap between client visibility, engineering execution, and program management by uniting structured intake, resource capacity planning, and bi-directional Jira Cloud syncing into a single, real-time workspace.
 
 ---
 
-## 🗺️ System Architecture & The 4-Role Delivery Loop
+## 🗺️ The Delivery Journey & System Architecture
 
-Vault aligns four organizational roles into a continuous, real-time delivery loop:
+Vault aligns four organizational roles into a continuous delivery loop, synchronized in real-time via a Redis Pub/Sub SSE tunnel and an incoming Jira webhook stream:
 
 ```
 [1. Client Intake & RICE] ──> [2. TPM Capacity Allocation] ──> [3. AE Execution & Standup] ──> [4. Admin Cockpit & AI Analytics]
@@ -21,105 +19,117 @@ Vault aligns four organizational roles into a continuous, real-time delivery loo
 ![Vault E2E System Architecture & Delivery Journey](/vault_architecture_diagram.jpg)
 *Figure 1: High-level architectural flowchart of Vault showing the real-time event pipeline and Jira integration.*
 
-### Tech Stack Breakdown:
-* **Frontend**: React SPA, Vite, Tailwind CSS, custom SVG Gantt charting engine, custom Server-Sent Events (SSE) state hooks.
-* **Backend**: Node.js, Express REST API, PostgreSQL database with dynamic schema migrations, Redis Pub/Sub broker.
-* **Integrations**: Jira Cloud REST API (cursor-paginated issue sync & webhooks), Dify AI orchestration stack (wrapping Ollama / Llama 3 with 4-hour Redis caching).
+### Technical Stack Breakdown:
+* **Frontend**: React SPA, Vite, Tailwind CSS (V3), custom SVG Gantt charting engine, real-time Server-Sent Events (SSE) hooks.
+* **Backend**: Node.js, Express, cursor-paginated Jira REST API integrations, Redis pub/sub broker, PostgreSQL database with dynamic SQL translation.
+* **AI Orchestration**: Dify Docker stack (wrapping Ollama/Llama 3), implementing the lean-prompt pattern to minimize token usage and cache summaries in Redis (4h TTL).
 
 ---
 
-## 1. Client Portal: Prioritized Intake & RICE Matrix
+## 🖼️ User Portals & Visual Walkthrough
 
-### The Problem Solved
-Clients frequently struggle to understand project timelines or prioritize feature requests objectively. Unstructured requests lead to scope creep and misaligned expectations.
+Each role in the delivery ecosystem lands on a dedicated, highly tuned dashboard:
 
-### The Solution in Vault
-The Client Portal provides external stakeholders with a clear view of active milestones while allowing them to submit delivery requests. Requests are scored mathematically using the **RICE Model**:
-
-> **RICE Score** = **(Reach × Impact × Confidence) ÷ Effort**
-
-This algorithmic prioritization removes subjective friction during backlog grooming meetings.
+### 1. Client Portal — Prioritized Intake & Timeline
+Clients gain a clear, scoped view of their active milestones and can submit delivery requests, scoring them mathematically using the RICE model (**Reach × Impact × Confidence ÷ Effort**).
 
 ![Client Portal — Prioritized Intake & RICE Matrix](/vault_client_portal.jpg)
 *Figure 2: Client Portal dashboard showing interactive RICE scoring sliders and milestone execution progress.*
 
----
-
-## 2. TPM Workbench: Drag-and-Drop Capacity Scheduling
-
-### The Problem Solved
-Over-allocating engineers leads to burnout, delayed sprints, and context switching. TPMs need an instant visual feedback loop when scheduling work items.
-
-### The Solution in Vault
-The TPM Workbench features an interactive scheduling calendar where managers drag Jira tickets directly onto engineers' timelines. The board dynamically calculates daily work hours and triggers **overload safety badges** if an engineer's allocation exceeds 8 hours a day.
+### 2. TPM Workbench — Drag-and-Drop Capacity Scheduling
+Technical Program Managers (TPMs) schedule sprints by dragging Jira tickets directly onto engineers' calendars. The board displays real-time overload safety badges if an engineer's allocation exceeds 8 hours a day.
 
 ![TPM Capacity Board — Drag-and-Drop Scheduling & Overload Badges](/vault_tpm_capacity.jpg)
 *Figure 3: TPM Capacity board illustrating calendar allocations, engineer utilization rates, and overload warnings.*
 
----
-
-## 3. AE Workspace: Standup Compliance & Bi-Directional Jira Webhook Loop
-
-### The Problem Solved
-Engineers dislike duplicate status updates. Entering comments in Jira, filling out standalone standup forms, and updating project boards creates administrative overhead.
-
-### The Solution in Vault
-The Account Engineer (AE) inbox consolidates today's assigned allocations into a clean daily view. When engineers complete EOD standup updates or transition issue states in Vault:
-1. Vault updates the internal database and publishes a Redis event.
-2. The backend sends an automated API payload directly to Jira using `jira.addComment()`.
-3. When external updates occur in Jira, a webhook hits `/api/jira/webhook`, updating the AE's inbox in real-time.
+### 3. AE Workspace — Clean Inbox & Standup Compliance
+Account Engineers (AEs) land on a focused list of today's allocations. They submit their EOD standups and write status transition comments that sync directly back to the Jira issue history.
 
 ![AE Inbox — Task Allocations & Jira Webhook Comment Sync](/vault_ae_inbox.jpg)
 *Figure 4: Account Engineer inbox featuring daily task lists, status toggles, and automated Jira comment syncing.*
 
----
-
-## 4. Admin Cockpit: Executive Heatmaps & Redis-Cached AI Summaries
-
-### The Problem Solved
-Leadership needs executive-level oversight without sifting through granular sprint tasks or paying exorbitant token fees for continuous AI summaries.
-
-### The Solution in Vault
-The Admin Cockpit aggregates cross-organizational metrics into portfolio heatmaps and manual RAG (Red-Amber-Green) status overrides. For AI insights:
-* We implemented the **lean-prompt pattern** with Dify/Llama 3.
-* Summaries are cached in Redis with a **4-hour TTL**, ensuring instant loads for executives while reducing LLM token costs by over 90%.
+### 4. Admin Cockpit — Executive Summary & Portfolio Health
+Admins and leadership view cross-organizational heatmaps, override project RAG (Red-Amber-Green) signals, and consume AI-generated executive summaries cached efficiently in Redis.
 
 ![Admin Cockpit — Portfolio Heatmap & AI Executive Summaries](/vault_admin_cockpit.jpg)
 *Figure 5: Executive Admin Cockpit rendering cross-project health matrices and AI summary widgets.*
 
 ---
 
-## ⚡ 5. Real-Time State Sync: Redis Pub/Sub & Server-Sent Events (SSE)
+## 🛠️ Local Installation & Quick Start
 
-Rather than forcing full browser page reloads or maintaining heavy WebSocket connections for read-heavy UI updates, Vault implements a **Server-Sent Events (SSE)** architecture:
+### Prerequisites
+* Node.js (v20+)
+* PostgreSQL (v14+)
+* Redis Server (v6+)
+* Docker (for Dify AI stack)
 
-```javascript
-// Example: Frontend usePmEvents hook intercepting SSE stream
-export function usePmEvents(onEvent) {
-  useEffect(() => {
-    const eventSource = new EventSource('/api/events');
-    eventSource.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      // Debounce updates by 300ms to prevent rapid UI thrashing
-      onEvent(data);
-    };
-    return () => eventSource.close();
-  }, [onEvent]);
-}
+### 1. Clone & Install Dependencies
+```bash
+# Install backend dependencies
+cd backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
 ```
 
-When a TPM updates an allocation:
-1. Express writes to PostgreSQL and publishes a payload to the Redis `pm:events` topic.
-2. The SSE handler broadcasts the event to all connected browser sessions.
-3. Connected client portals, AE inboxes, and TPM boards refresh seamlessly in real-time.
+### 2. Configure Environment Variables
+Create a `.env` file in the `backend/` directory:
+
+```env
+PORT=3001
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_NAME=playground
+REDIS_URL=redis://127.0.0.1:6379
+
+# Jira Integration
+JIRA_BASE_URL=https://your-domain.atlassian.net
+JIRA_EMAIL=your-email@domain.com
+JIRA_API_TOKEN=your_atlassian_api_token
+JIRA_WEBHOOK_SECRET=your_webhook_verification_secret
+
+# Dify AI
+DIFY_BASE_URL=http://localhost/v1
+DIFY_API_KEY=your_dify_api_key
+```
+
+### 3. Database Initialization & Migrations
+Vault uses PostgreSQL. To seed schemas and load default migrations:
+
+```bash
+cd backend
+npm run db:init
+npm run db:migrate
+npm run db:seed
+```
+
+### 4. Running the Application
+```bash
+# Start backend service (Express on port 3001)
+cd backend
+npm run dev
+
+# Start frontend dev server (Vite on port 5173 with HMR)
+cd ../frontend
+npm run dev
+```
 
 ---
 
-## 📦 6. Deployment & Containerization Strategy
+## ⚡ Key Synchronization Engines
 
-Vault was engineered for zero-friction containerized deployment:
-* **Multi-stage Dockerfile**: Builds the Vite React frontend into static assets and packages the Node.js production server in a single Alpine Linux container.
-* **Auto-Seeding Database**: Maps `schema.sql` into `/docker-entrypoint-initdb.d/init.sql` for 1-click database initialization.
-* **Zero-Cost Production Hosting**: Architected to run for **₹0/month** by deploying the React SPA on **Vercel**, the Express backend on **Koyeb/Render**, PostgreSQL on **Supabase**, and Redis on **Upstash**.
+### Server-Sent Events (SSE) Sync
+Vault coordinates browser states without page refreshes. When a TPM assigns a ticket:
+1. The backend writes the allocation and publishes an event to the `pm:events` Redis channel.
+2. The Express SSE server catches the Redis event and pushes it to connected browsers.
+3. The frontend `usePmEvents()` hook intercepts the payload, debounces for 300ms, and reloads the affected component state.
 
-Vault demonstrates how uniting structured intake, intelligent capacity planning, and real-time event synchronization creates a seamless delivery cockpit for modern engineering teams.
+### Bi-directional Jira Webhook Loop
+1. When a ticket status changes in Jira, a webhook is fired to `POST /api/jira/webhook`.
+2. Vault records the transition, alerts the assigned engineer's Inbox, and prompts them for an audit comment.
+3. The engineer's explanation is posted directly back to Jira as an issue comment via `jira.addComment()`.
